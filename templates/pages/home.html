@@ -1,0 +1,3287 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+{{#partial "hero"}}
+{{{region name="home_below_menu"}}}
+    {{#if carousel}}
+        {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows}}
+    {{/if}}
+    {{{region name="home_below_carousel"}}}
+{{/partial}}
+
+{{#partial "page"}}
+
+  {{#each shipping_messages}}
+    {{> components/common/alert/alert-info message}}
+  {{/each}}
+
+<div class="main full">
+  <div class="cut-to-size">
+    <div class="cts-header">
+      <h2 class="cts-heading"><a href="#custom-cutting-board">Configure Your Custom Cutting Board</a></h2>
+    </div>
+
+    <div class="configurator" id="custom-cutting-board">
+      <div class="modal-overlay" id="faq-modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+
+          <div class="cts-header">
+            <h2 class="cts-heading no-margin">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="section hdpe" id="hdpe">
+            <div class="label">
+              What material is the cutting board made from?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">All of our plastic cutting boards are made from high-density polyethylene (HDPE) plastic. HDPE is a formulated non-porous, high density material for food processing applications designed with superior scratch resistance. It will not absorb moisture, bacteria, or odors. It will not chip or peel and is dishwasher-safe. HDPE is not altered by chemicals, moisture, or impact which makes it ideal for such a wide range of applications.</p>
+
+                  <p class="text centered"><a href="https://store-hep33asv71.mybigcommerce.com/content/cuttingboard-sds.pdf" target="_blank">View Safety Data Sheet (SDS)</a></p>
+
+                  <div class="comparison-chart">
+                    <div class="column">
+                      <h2 class="heading">Key Material Benefits</h2>
+                      <ul>
+                        <li>Does not absorb moisture, odor, or bacteria</li>
+                        <li>Easy to clean, dishwasher-safe</li>
+                        <li>Cleaning fluids wash off easily</li>
+                        <li>Ability to use at low temperatures — freezer applications</li>
+                      </ul>
+                    </div>
+
+                    <div class="column">
+                      <h2 class="heading">Advantages</h2>
+                      <ul>
+                        <li>Specially designed texture will maximize product life and minimize wear on knives</li>
+                        <li>Finish is consistent on both sides so that they can be used on either side, extending their longevity</li>
+                        <li>Will not chip, peel, or crack</li>
+                      </ul>
+                    </div>
+
+                    <div class="column">
+                      <h2 class="heading">Compliances</h2>
+                      <ul>
+                        <li>FDA</li>
+                        <li>USDA</li>
+                        <li>NSF (<em>Effective Date: January 1, 2016</em>)</li>
+                        <li>RoHS</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="comparison-chart">
+                    <div class="column">
+                      <h2 class="heading">Colors</h2>
+                      <div class="color-block">
+                        <span>Natural</span>
+                        <span class="color-swatch natural long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Polar White</span>
+                        <span class="color-swatch polar-white long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Black</span>
+                        <span class="color-swatch black long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Gray</span>
+                        <span class="color-swatch gray long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Beige</span>
+                        <span class="color-swatch beige long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Seafoam</span>
+                        <span class="color-swatch seafoam long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Sandshade</span>
+                        <span class="color-swatch sandshade long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Blue</span>
+                        <span class="color-swatch blue long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Dark Blue</span>
+                        <span class="color-swatch dark-blue long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Green</span>
+                        <span class="color-swatch green long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Dark Green</span>
+                        <span class="color-swatch dark-green long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Red</span>
+                        <span class="color-swatch red long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Dark Red</span>
+                        <span class="color-swatch dark-red long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Yellow</span>
+                        <span class="color-swatch yellow long"></span>
+                      </div>
+
+                      <div class="color-block">
+                        <span>Dark Yellow</span>
+                        <span class="color-swatch dark-yellow long"></span>
+                      </div>
+                    </div>
+
+                    <div class="column">
+                      <h2 class="heading">Thickness</h2>
+                      <p class="text">1/4" - 2"</p>
+                      <p class="thickness-warning">Thicknesses above 1" only available in smooth texture</p>
+
+                      <div class="thickness-image">
+                        <div class="quarter-inch-block"></div>
+                        <div class="quarter-inch-shadow"></div>
+                        <div class="two-inch-block"></div>
+                        <div class="two-inch-shadow"></div>
+                      </div>
+                    </div>
+
+                    <div class="column">
+                      <h2 class="heading">Finish</h2>
+                      <p class="text">Textured (Matte) or Smooth</p>
+                      
+                      <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/hdpe-texture-comparison.png" class="diagram-alternate"></img>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section texture-comparison" id="texture-comparison">
+            <div class="label">
+              What is the difference between the pebbled and smooth finish?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">Textured HDPE plastic is most commonly referred to as plastic cutting board material and can be cut into any custom shape and size determined by the consumer and the application. The non-porous surface is not slippery and prevents the users knife from going dull after repeated use, which makes for an ideal cutting surface for food application. Additionally, the boards are textured on both sides so that they can be used on either side, extending their longevity. While smooth HDPE is still considered food safe, it is not as ideal for cutting or preparing food the way that textured HDPE is.</p>
+                </div>
+              </div>
+
+              <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/hdpe-texture-comparison-zoomed.png" class="diagram"></img>
+
+            </div>
+          </div>
+
+          <div class="section size-shape" id="size-shape">
+            <div class="label">
+              I don't see the size or shape I need?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">With our state-of-the-art CNC routers, we can make a board of virtually any shape, design, or pattern. Simply give us a call at <a href="tel:18006273010">1-800-627-3010</a> or email your design to <a href="mailto:ecom@plastic-craft.com">ecom@plastic-craft.com</a> to request a quote.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section color-thickness" id="color-thickness">
+            <div class="label">
+              I don't see the color or thickness I want?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">Plastic-Craft Products, (Plastic Cutting Boards) sources and distributes many FDA compliant colors, thicknesses, and textures but if you don't see what you want, please contact us by phone or email and we will do our best to meet your needs. A minimum order quantity may be required for material we don't normally stock.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section shipping-cost" id="shipping-cost">
+            <div class="label">
+              How do you calculate shipping costs?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">Plastic-Craft Products is pleased to offer an enhanced value shipping program on PlasticCuttingBoards.com for all orders shipped within the Continental U.S. (excluding Hawaii and Alaska)</p>
+
+                  <br>
+
+                  <ul class="text">
+                    <li>Orders <strong>UNDER $75.00</strong> and within the standard size dimensions and weight qualify for a <strong>FLAT $6.00 RATE</strong> for standard shipping.</li>
+                    <li>Orders <strong>OVER $75.00</strong> and within the standard size dimensions and weight qualify for <strong>FREE</strong> standard shipping.</li>
+                  </ul>
+
+                  <p class="text">Our site will automatically offer the most affordable packing for your order and may split your order into multiple packages to offer you the best shipping rate. If the item(s) in your cart is/are estimated to be dimensionally oversize, your shipping quote will include a large package surcharge. In many oversize cases, simply reducing the dimensions of the board by just a few inches may return standard size rates. If ordering a large board, it is often recommended to purchase two separate boards (each half of the desired length) to be placed next to each other in order to minimize the shipping costs caused by the large package surcharge.</p>
+
+                  <br>
+
+                  <p class="text">Orders which contain item(s) that exceed the UPS weight and size limits (this includes full sheets) and cannot be shipped via UPS can <strong>ONLY</strong> be shipped via an LTL freight carrier or picked up locally.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section lead-time" id="lead-time">
+            <div class="label">
+              What is the typical lead time?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">Most orders are cut and shipped within 1-2 business days of order receipt. Please note that this does not include transit time. Depending on your destination location, ground transit is generally between one to five days and oversize shipments via LTL freight carrier may take a little longer.</p>
+
+                  <br>
+
+                  <p><strong>NOTE: <span style="color: #ca1c25">All orders placed after the cut-off time of 2:00pm eastern time WILL NOT be dispatched until the following business day (Monday-Friday), excluding holidays. </span></strong> This includes orders placed with an expedited shipping option (2-day or next day delivery services).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section cancel" id="cancel">
+            <div class="label">
+              What if I want to cancel or change my order after I have submitted it?
+            </div>
+
+            <div class="content">
+              <div class="text-content">
+                <div class="info">
+                  <p class="text">If you made a mistake placing your order, or would like to cancel it prior to shipment, please send us an email at <a href="mailto:ecom@plastic-craft.com">ecom@plastic-craft.com</a> as soon as possible. If your order has not yet been cut or shipped, we will be happy to facilitate such request.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-details">
+        <div class="product-image">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/natural.png" alt="Product Image">
+        </div>
+    
+        <div class="section dimensions no-margin">
+          <div class="label">
+            Dimensions
+            <span class="selected-option-text"></span>
+            <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="size-shape">
+            <img src="https://plastic-craft.com/content/arrow-icon.svg" class="arrow-icon">
+            <a href="javascript:void(0);" class="full-sheets-text">View full sheets</a>
+          </div>
+
+          <div class="dropdown-content">
+            <div class="input-boxes">
+              <div class="input-wrapper">
+                <label for="length">Length: <span class="max length">(Max: 0.00")</span></label>
+                <input class="length-input" type="number" inputmode="decimal" step="0.001" min="0.001" id="length" name="length" autocomplete="off" placeholder="Enter length (in inches)">
+              </div>
+      
+              <div class="input-wrapper">
+                <label for="width">Width: <span class="max width">(Max: 0.00")</span></label>
+                <input class="width-input" type="number" inputmode="decimal" step="0.001" min="0.001" id="width" name="width" autocomplete="off" placeholder="Enter width (in inches)">
+              </div>
+            </div>
+
+            <div class="alert warning measurement-warning">Fractional measurements must be entered as <strong>decimals</strong> (<a href="javascript:void(0);" class="open-modal" data-modal="conversion-chart-modal">Conversion Chart</a>)</div>
+
+            <div class="modal-overlay" id="conversion-chart-modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+      
+                <div class="cts-header">
+                  <h2 class="cts-heading no-margin">Conversion Chart</h2>
+                </div>
+
+                <table class="conversion-chart">
+                  <tr class="row">
+                    <th class="heading">Fraction</th>
+                    <th class="heading">Decimal</th>
+                    <th class="heading">Fraction</th>
+                    <th class="heading">Decimal</th>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">1/64"</td>
+                    <td class="data">0.015625"</td>
+                    <td class="data">33/64"</td>
+                    <td class="data">0.515625"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">1/32"</td>
+                    <td class="data">0.03125"</td>
+                    <td class="data">17/32"</td>
+                    <td class="data">0.53125"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">3/64"</td>
+                    <td class="data">0.046875"</td>
+                    <td class="data">35/64"</td>
+                    <td class="data">0.546875"</td>
+                  </tr>
+
+                  <tr class="row sixteenths">
+                    <td class="data">1/16"</td>
+                    <td class="data">0.0625"</td>
+                    <td class="data">9/16"</td>
+                    <td class="data">0.5625"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">5/64"</td>
+                    <td class="data">0.078125"</td>
+                    <td class="data">37/64"</td>
+                    <td class="data">0.578125"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">3/32"</td>
+                    <td class="data">0.09375"</td>
+                    <td class="data">19/32"</td>
+                    <td class="data">0.59375"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">7/64"</td>
+                    <td class="data">0.109375"</td>
+                    <td class="data">39/64"</td>
+                    <td class="data">0.609375"</td>
+                  </tr>
+
+                  <tr class="row eighths">
+                    <td class="data">1/8"</td>
+                    <td class="data">0.125"</td>
+                    <td class="data">5/8"</td>
+                    <td class="data">0.625"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">9/64"</td>
+                    <td class="data">0.140625"</td>
+                    <td class="data">41/64"</td>
+                    <td class="data">0.640625"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">5/32"</td>
+                    <td class="data">0.15625"</td>
+                    <td class="data">21/32"</td>
+                    <td class="data">0.65625"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">11/64"</td>
+                    <td class="data">0.171875"</td>
+                    <td class="data">43/64"</td>
+                    <td class="data">0.671875"</td>
+                  </tr>
+
+                  <tr class="row sixteenths">
+                    <td class="data">3/16"</td>
+                    <td class="data">0.1875</td>
+                    <td class="data">11/16"</td>
+                    <td class="data">0.6875"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">13/64"</td>
+                    <td class="data">0.203125"</td>
+                    <td class="data">45/64"</td>
+                    <td class="data">0.703125"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">7/32"</td>
+                    <td class="data">0.21875</td>
+                    <td class="data">23/32"</td>
+                    <td class="data">0.71875"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">15/64"</td>
+                    <td class="data">0.234375</td>
+                    <td class="data">47/64"</td>
+                    <td class="data">0.734375</td>
+                  </tr>
+
+                  <tr class="row fourths">
+                    <td class="data">1/4"</td>
+                    <td class="data">0.25"</td>
+                    <td class="data">3/4"</td>
+                    <td class="data">0.75"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">17/64"</td>
+                    <td class="data">0.265625"</td>
+                    <td class="data">49/64"</td>
+                    <td class="data">0.765625"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">9/32"</td>
+                    <td class="data">0.28125"</td>
+                    <td class="data">25/32"</td>
+                    <td class="data">0.78125"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">19/64"</td>
+                    <td class="data">0.296875"</td>
+                    <td class="data">51/64"</td>
+                    <td class="data">0.796875"</td>
+                  </tr>
+
+                  <tr class="row sixteenths">
+                    <td class="data">5/16"</td>
+                    <td class="data">0.3125"</td>
+                    <td class="data">13/16"</td>
+                    <td class="data">0.1875"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">21/64"</td>
+                    <td class="data">0.328125"</td>
+                    <td class="data">53/64"</td>
+                    <td class="data">0.828125"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">11/32"</td>
+                    <td class="data">0.34375"</td>
+                    <td class="data">27/32"</td>
+                    <td class="data">0.84375"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">23/64"</td>
+                    <td class="data">0.359375"</td>
+                    <td class="data">55/64"</td>
+                    <td class="data">0.859375"</td>
+                  </tr>
+
+                  <tr class="row eighths">
+                    <td class="data">3/8"</td>
+                    <td class="data">0.375"</td>
+                    <td class="data">7/8"</td>
+                    <td class="data">0.875"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">25/64"</td>
+                    <td class="data">0.390625"</td>
+                    <td class="data">57/64"</td>
+                    <td class="data">0.890625"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">13/32"</td>
+                    <td class="data">0.40625"</td>
+                    <td class="data">29/32"</td>
+                    <td class="data">0.90625"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">27/64"</td>
+                    <td class="data">0.421875"</td>
+                    <td class="data">59/64"</td>
+                    <td class="data">0.921875"</td>
+                  </tr>
+
+                  <tr class="row sixteenths">
+                    <td class="data">7/16"</td>
+                    <td class="data">0.4375"</td>
+                    <td class="data">15/16"</td>
+                    <td class="data">0.9375"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">29/64"</td>
+                    <td class="data">0.453125"</td>
+                    <td class="data">61/64"</td>
+                    <td class="data">0.953125"</td>
+                  </tr>
+
+                  <tr class="row thirty-seconds">
+                    <td class="data">15/32"</td>
+                    <td class="data">0.46875"</td>
+                    <td class="data">31/32"</td>
+                    <td class="data">0.96875"</td>
+                  </tr>
+
+                  <tr class="row sixty-fourths">
+                    <td class="data">31/64"</td>
+                    <td class="data">0.484375"</td>
+                    <td class="data">63/64"</td>
+                    <td class="data">0.984375"</td>
+                  </tr>
+
+                  <tr class="row halfs">
+                    <td class="data">1/2"</td>
+                    <td class="data">0.5"</td>
+                    <td class="data">1"</td>
+                    <td class="data">1"</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+      
+            <div class="full-sheets">
+              <div class="alert danger no-margin out-of-stock-warning">No full sheets currently available</div>
+    
+              <div class="btn-wrapper">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout desktop">
+          <div class="price-quantity">
+            <div class="price"><span class="price-value">$0.00</span> <span class="shipping">(+$6.00 estimated shipping)</span><img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="shipping-cost"></div>
+            <div class="quantity">
+              <button class="decrement">-</button>
+              <input type="number" class="quantity-input" value="1">
+              <button class="increment">+</button>
+            </div>
+          </div>
+      
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="product-options">
+        <div class="section texture">
+          <div class="label">
+            Texture
+            <span class="selected-option-text">Pebbled</span>
+            <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="texture-comparison">
+            <img src="https://plastic-craft.com/content/arrow-icon.svg" class="arrow-icon">
+          </div>
+
+          <div class="dropdown-content">
+            <div class="btn-wrapper two-options">
+              <button class="cts-btn active" data-texture="Pebbled">Pebbled</button>
+              <button class="cts-btn" data-texture="Smooth">Smooth</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section thickness">
+          <div class="label">
+            Thickness
+            <span class="selected-option-text thickness-text">0.5"</span>
+            <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="color-thickness">
+            <img src="https://plastic-craft.com/content/arrow-icon.svg" class="arrow-icon">
+            <a href="javascript:void(0);" class="conversion-text">Convert to fractions</a>
+          </div>
+
+          <div class="dropdown-content">
+            <div class="btn-wrapper">
+              <button class="cts-btn thickness-btn" data-thickness="0.25">0.25"</button>
+              <button class="cts-btn thickness-btn" data-thickness="0.375">0.375"</button>
+              <button class="cts-btn thickness-btn active" data-thickness="0.5">0.5"</button>
+              <button class="cts-btn thickness-btn" data-thickness="0.625">0.625"</button>
+              <button class="cts-btn thickness-btn" data-thickness="0.75">0.75"</button>
+              <button class="cts-btn thickness-btn" data-thickness="1">1"</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="section color">
+          <div class="label">
+            Color
+            <span class="selected-option-text">Natural</span>
+            <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="color-thickness">
+            <img src="https://plastic-craft.com/content/arrow-icon.svg" class="arrow-icon">
+          </div>
+  
+          <div class="dropdown-content">
+            <div class="btn-wrapper contain">
+              <button class="cts-btn thumbnail active" data-color="Natural">
+                <div class="color-swatch natural outline"></div>
+                Natural
+              </button>
+
+              <button class="cts-btn thumbnail" data-color="Polar_White">
+                <div class="color-swatch polar-white outline"></div>
+                Polar White
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Black">
+                <div class="color-swatch black"></div>
+                Black
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Gray">
+                <div class="color-swatch gray"></div>
+                Gray
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Beige">
+                <div class="color-swatch beige"></div>
+                Beige
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Blue">
+                <div class="color-swatch blue"></div>
+                Blue
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Green">
+                <div class="color-swatch green"></div>
+                Green
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Red">
+                <div class="color-swatch red"></div>
+                Red
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Yellow">
+                <div class="color-swatch yellow"></div>
+                Yellow
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Seafoam">
+                <div class="color-swatch seafoam outline"></div>
+                Seafoam
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Dark_Blue">
+                <div class="color-swatch dark-blue"></div>
+                Dark Blue
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Dark_Green">
+                <div class="color-swatch dark-green"></div>
+                Dark Green
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Dark_Red">
+                <div class="color-swatch dark-red"></div>
+                Dark Red
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Dark_Yellow">
+                <div class="color-swatch dark-yellow"></div>
+                Dark Yellow
+              </button>
+    
+              <button class="cts-btn thumbnail" data-color="Sandshade">
+                <div class="color-swatch sandshade"></div>
+                Sandshade
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="section additional-options no-margin">
+          <div class="label">
+            Additional Options
+            <img src="https://plastic-craft.com/content/arrow-icon.svg" class="arrow-icon">
+          </div>
+
+          <div class="dropdown-content">
+            <div class="btn-wrapper">
+              <button class="cts-btn thumbnail open-modal open-tab" data-modal="additional-options-modal" data-target="edge-type">
+                <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/edge-type-group.png" class="image-thumbnail"></img>
+                Edge Type
+        
+                <div class="option">
+                  <div class="selected-option-text">Standard</div>
+                </div>
+
+                <div class="underline"></div>
+              </button>
+
+              <button class="cts-btn thumbnail open-modal open-tab" data-modal="additional-options-modal" data-target="radius-corners">
+                <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corners-group.png" class="image-thumbnail"></img>
+                Radius Corners
+
+                <div class="option">
+                  <div class="selected-option-text">No</div>
+                </div>
+
+                <div class="underline"></div>
+              </button>
+
+              <button class="cts-btn thumbnail open-modal open-tab" data-modal="additional-options-modal" data-target="handle-cutout">
+                <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/handle-short-side.png" class="image-thumbnail"></img>
+                Handle Cutout
+
+                <div class="option">
+                  <div class="selected-option-text">No</div>
+                </div>
+
+                <div class="underline"></div>
+              </button>
+
+              <button class="cts-btn thumbnail open-modal open-tab" data-modal="additional-options-modal" data-target="dripwell">
+                <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/dripwell.png" class="image-thumbnail"></img>
+                Juice Groove (Dripwell)
+
+                <div class="option">
+                  <div class="selected-option-text">No</div>
+                </div>
+
+                <div class="underline"></div>
+              </button>
+              
+              <button class="cts-btn thumbnail open-modal open-tab" data-modal="additional-options-modal" data-target="rubber-feet">
+                <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/rubber-feet-installed.png" class="image-thumbnail"></img>
+                Rubber Feet
+
+                <div class="option">
+                  <div class="selected-option-text">No</div>
+                </div>
+
+                <div class="underline"></div>
+              </button>
+            </div>
+
+            <div class="modal-overlay" id="additional-options-modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+
+                <div class="checkout no-margin">
+                  <div class="price-quantity">
+                    <div class="price"><span class="price-value">$0.00</span> <span class="shipping">(+$6.00 shipping)</span></div>
+                  </div>
+                </div>
+
+                <div class="btn-wrapper tab-wrapper">
+                  <button class="cts-btn thumbnail open-tab tab-selector active" data-target="edge-type">
+                    <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/edge-type-group.png" class="image-thumbnail"></img>
+                    Edge Type
+            
+                    <div class="option">
+                      <div class="selected-option-text">Standard</div>
+                    </div>
+    
+                    <div class="underline"></div>
+                  </button>
+    
+                  <button class="cts-btn thumbnail open-tab tab-selector no-left-border" data-target="radius-corners">
+                    <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corners-group.png" class="image-thumbnail"></img>
+                    Radius Corners
+    
+                    <div class="option">
+                      <div class="selected-option-text">No</div>
+                    </div>
+    
+                    <div class="underline"></div>
+                  </button>
+    
+                  <button class="cts-btn thumbnail open-tab tab-selector no-left-border" data-target="handle-cutout">
+                    <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/handle-short-side.png" class="image-thumbnail"></img>
+                    Handle Cutout
+    
+                    <div class="option">
+                      <div class="selected-option-text">No</div>
+                    </div>
+    
+                    <div class="underline"></div>
+                  </button>
+    
+                  <button class="cts-btn thumbnail open-tab tab-selector no-left-border" data-target="dripwell">
+                    <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/dripwell.png" class="image-thumbnail"></img>
+                    Juice Groove (Dripwell)
+    
+                    <div class="option">
+                      <div class="selected-option-text">No</div>
+                    </div>
+    
+                    <div class="underline"></div>
+                  </button>
+                  
+                  <button class="cts-btn thumbnail open-tab tab-selector no-left-border" data-target="rubber-feet">
+                    <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/rubber-feet-installed.png" class="image-thumbnail"></img>
+                    Rubber Feet
+    
+                    <div class="option">
+                      <div class="selected-option-text">No</div>
+                    </div>
+    
+                    <div class="underline"></div>
+                  </button>
+                </div>
+
+                <div class="content block">
+                  <div class="section cts-tab-content edge-type" id="edge-type">
+                    <div class="label">
+                      Edge Type
+                      <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon edge-type-tooltip">
+                    </div>
+  
+                    <div class="content">
+                      <div class="text-content">
+                        <div class="btn-wrapper">
+                          <button class="cts-btn thumbnail-large active" data-edge-type="Standard">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/edge-type-standard.png" class="image-thumbnail"></img>
+
+                            <div class="option">Standard</div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-edge-type="Half_Bullnose">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/edge-type-half-bullnose.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Half Bullnose 
+                              <span class="price-difference">(+$20)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-edge-type="Full_Bullnose">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/edge-type-full-bullnose.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Full Bullnose 
+                              <span class="price-difference">(+$20)</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="section cts-tab-content radius-corners" id="radius-corners">
+                    <div class="label">
+                      Radius Corners
+                      <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon radius-corners-tooltip">
+                    </div>
+  
+                    <div class="content">
+                      <div class="text-content">
+                        <div class="btn-wrapper">
+                          <button class="cts-btn thumbnail-large active" data-radius-corners="No">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corner-none.png" class="image-thumbnail"></img>
+
+                            <div class="option">No</div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-radius-corners="0.5">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corner-half-inch.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              0.5" 
+                              <span class="price-difference">(+$10)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-radius-corners="0.75">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corner-three-quarter-inch.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              0.75" 
+                              <span class="price-difference">(+$10)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-radius-corners="1">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corner-one-inch.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              1" 
+                              <span class="price-difference">(+$10)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-radius-corners="2">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/radius-corner-two-inch.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              2" 
+                              <span class="price-difference">(+$10)</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="section cts-tab-content handle-cutout" id="handle-cutout">
+                    <div class="label">
+                      Handle Cutout
+                      <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon handle-cutout-tooltip">
+                    </div>
+  
+                    <div class="content">
+                      <div class="text-content">
+                        <div class="info">
+                          <div class="alert primary no-margin">Get $5 off of a dripwell when you get a handle cutout</div>
+                        </div>
+                        
+                        <div class="btn-wrapper">
+                          <button class="cts-btn thumbnail-large active" data-handle-cutout="No">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/handle-none.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              No
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-handle-cutout="Yes_Short">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/handle-short-side.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Yes (Shorter Side)
+                              <span class="price-difference">(+$20)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-handle-cutout="Yes_Long">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/handle-long-side.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Yes (Longer Side)
+                              <span class="price-difference">(+$20)</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="section cts-tab-content dripwell" id="dripwell">
+                    <div class="label">
+                      Juice Groove (Dripwell)
+                      <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon dripwell-tooltip">
+                    </div>
+  
+                    <div class="content">
+                      <div class="text-content">
+                        <div class="info">
+                          <div class="alert primary no-margin">Get $5 off of a dripwell when you get a handle cutout</div>
+                        </div>
+
+                        <div class="btn-wrapper">
+                          <button class="cts-btn thumbnail-large active" data-dripwell="No">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/dripwell-none.png" class="image-thumbnail"></img>
+
+                            <div class="option">No</div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-dripwell="Yes">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/dripwell.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Yes 
+                              <span class="price-difference discount">(+$20)</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="section cts-tab-content rubber-feet" id="rubber-feet">
+                    <div class="label">
+                      Rubber Feet
+                      <img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon rubber-feet-tooltip">
+                    </div>
+  
+                    <div class="content">
+                      <div class="text-content">
+                        <div class="info">
+                          <div class="alert danger no-margin feet-unavailable-warning">Feet unavailable on thicknesses below 1/2"</div>
+                        </div>
+
+                        <div class="btn-wrapper">
+                          <button class="cts-btn thumbnail-large active" data-rubber-feet="No">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/rubber-feet-none.png" class="image-thumbnail"></img>
+
+                            <div class="option">No</div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-rubber-feet="Separate">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/rubber-feet-separate.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Set of 4 Rubber Feet (Separate)
+                              <span class="price-difference">(+$3.99)</span>
+                            </div>
+                          </button>
+                          <button class="cts-btn thumbnail-large" data-rubber-feet="Installed">
+                            <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/rubber-feet-installed.png" class="image-thumbnail"></img>
+
+                            <div class="option">
+                              Set of 4 Rubber Feet (Installed)
+                              <span class="price-difference">(+$13.99)</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout mobile">
+          <div class="price-quantity">
+            <div class="price"><span class="price-value">$0.00</span> <span class="shipping">(+$6.00 shipping)</span><img src="https://plastic-craft.com/content/question-mark-icon.svg" class="question-mark-icon open-modal" data-modal="faq-modal" data-section="shipping-cost"></div>
+            <div class="quantity">
+              <button class="decrement">-</button>
+              <input type="text" class="quantity-input" value="1">
+              <button class="increment">+</button>
+            </div>
+          </div>
+      
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="alert danger warning-list"></div>
+    </div>
+
+    <div class="message-box">
+      <div class="alert danger error-list"></div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="product-info">
+      <div class="section hdpe" id="hdpe">
+        <div class="label">
+          What material is the cutting board made from?
+        </div>
+
+        <div class="content">
+          <div class="text-content">
+            <div class="info">
+              <p class="text">All of our plastic cutting boards are made from high-density polyethylene (HDPE) plastic. HDPE is a formulated non-porous, high density material for food processing applications designed with superior scratch resistance. It will not absorb moisture, bacteria, or odors. It will not chip or peel and is dishwasher-safe. HDPE is not altered by chemicals, moisture, or impact which makes it ideal for such a wide range of applications.</p>
+
+              <p class="text centered"><a href="https://store-hep33asv71.mybigcommerce.com/content/cuttingboard-sds.pdf" target="_blank">View Safety Data Sheet (SDS)</a></p>
+
+              <div class="comparison-chart">
+                <div class="column">
+                  <h2 class="heading">Key Material Benefits</h2>
+                  <ul>
+                    <li>Does not absorb moisture, odor, or bacteria</li>
+                    <li>Easy to clean, dishwasher-safe</li>
+                    <li>Cleaning fluids wash off easily</li>
+                    <li>Ability to use at low temperatures — freezer applications</li>
+                  </ul>
+                </div>
+
+                <div class="column">
+                  <h2 class="heading">Advantages</h2>
+                  <ul>
+                    <li>Specially designed texture will maximize product life and minimize wear on knives</li>
+                    <li>Finish is consistent on both sides so that they can be used on either side, extending their longevity</li>
+                    <li>Will not chip, peel, or crack</li>
+                  </ul>
+                </div>
+
+                <div class="column">
+                  <h2 class="heading">Compliances</h2>
+                  <ul>
+                    <li>FDA</li>
+                    <li>USDA</li>
+                    <li>NSF (<em>Effective Date: January 1, 2016</em>)</li>
+                    <li>RoHS</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="comparison-chart">
+                <div class="column">
+                  <h2 class="heading">Colors</h2>
+                  <div class="color-block">
+                    <span>Natural</span>
+                    <span class="color-swatch natural long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Polar White</span>
+                    <span class="color-swatch polar-white long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Black</span>
+                    <span class="color-swatch black long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Gray</span>
+                    <span class="color-swatch gray long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Beige</span>
+                    <span class="color-swatch beige long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Seafoam</span>
+                    <span class="color-swatch seafoam long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Sandshade</span>
+                    <span class="color-swatch sandshade long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Blue</span>
+                    <span class="color-swatch blue long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Dark Blue</span>
+                    <span class="color-swatch dark-blue long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Green</span>
+                    <span class="color-swatch green long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Dark Green</span>
+                    <span class="color-swatch dark-green long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Red</span>
+                    <span class="color-swatch red long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Dark Red</span>
+                    <span class="color-swatch dark-red long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Yellow</span>
+                    <span class="color-swatch yellow long"></span>
+                  </div>
+
+                  <div class="color-block">
+                    <span>Dark Yellow</span>
+                    <span class="color-swatch dark-yellow long"></span>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <h2 class="heading">Thickness</h2>
+                  <p class="text">1/4" - 2"</p>
+                  <p class="thickness-warning">Thicknesses above 1" only available in smooth texture</p>
+
+                  <div class="thickness-image">
+                    <div class="quarter-inch-block"></div>
+                    <div class="quarter-inch-shadow"></div>
+                    <div class="two-inch-block"></div>
+                    <div class="two-inch-shadow"></div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <h2 class="heading">Finish</h2>
+                  <p class="text">Textured (Matte) or Smooth</p>
+                  
+                  <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/hdpe-texture-comparison.png" class="diagram-alternate"></img>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Handles dropdowns
+  document.addEventListener('DOMContentLoaded', function() {
+    function toggleSection(section) {
+      section.classList.toggle('collapsed');
+  
+      const selectedOptionText = section.querySelector('.label .selected-option-text');
+      const selectedButton = section.querySelector('.cts-btn.active');
+  
+      if (selectedOptionText) {
+        selectedOptionText.textContent = selectedButton.textContent;
+      }
+    }
+  
+    function handleDropdownClick(event, section) {
+      const clickedElement = event.target;
+  
+      const isFullSheetsText = clickedElement.classList.contains('full-sheets-text');
+      const isConversionText = clickedElement.classList.contains('conversion-text');
+      const isQuestionMarkIcon = clickedElement.classList.contains('question-mark-icon');
+  
+      const arrowIcon = clickedElement.classList.contains('arrow-icon');
+      const labelClicked = clickedElement.closest('.label') === section.querySelector('.label');
+  
+      if (arrowIcon || labelClicked) {
+        if (!isQuestionMarkIcon && !isFullSheetsText && !isConversionText) {
+          toggleSection(section);
+        }
+      }
+  
+      if (isFullSheetsText || isConversionText) {
+        clickedElement.blur();
+      }
+    }
+  
+    const dimensionsSection = document.querySelector('.product-details .dimensions');
+    const textureSection = document.querySelector('.product-options .texture');
+    const thicknessSection = document.querySelector('.product-options .thickness');
+    const colorSection = document.querySelector('.product-options .color');
+    const additionalOptionsSection = document.querySelector('.product-options .additional-options');
+  
+    dimensionsSection.addEventListener('click', function(event) {
+      handleDropdownClick(event, this);
+    });
+  
+    textureSection.addEventListener('click', function(event) {
+      handleDropdownClick(event, this);
+    });
+  
+    thicknessSection.addEventListener('click', function(event) {
+      handleDropdownClick(event, this);
+    });
+  
+    colorSection.addEventListener('click', function(event) {
+      handleDropdownClick(event, this);
+    });
+  
+    additionalOptionsSection.addEventListener('click', function(event) {
+      handleDropdownClick(event, this);
+    });
+  });
+</script>
+
+<script>
+  // Handles button clicks
+  function handleSectionButtonClick(sectionButtons, selectedButton) {
+    sectionButtons.forEach(button => {
+      if (button === selectedButton) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+  }
+  
+  function addClickEventToButtons(sectionSelector) {
+    const sectionButtons = document.querySelectorAll(`${sectionSelector} .cts-btn`);
+    sectionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        handleSectionButtonClick(sectionButtons, button);
+      });
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    addClickEventToButtons('.full-sheets');
+    addClickEventToButtons('.product-options .texture');
+    addClickEventToButtons('.product-options .thickness');
+    addClickEventToButtons('.product-options .color');
+    addClickEventToButtons('.product-options .additional-options .edge-type');
+    addClickEventToButtons('.product-options .additional-options .radius-corners');
+    addClickEventToButtons('.product-options .additional-options .handle-cutout');
+    addClickEventToButtons('.product-options .additional-options .dripwell');
+    addClickEventToButtons('.product-options .additional-options .rubber-feet');
+  });
+</script>
+
+<script>
+  // Handles the opening/closing of modals
+  document.addEventListener("DOMContentLoaded", function() {
+    const modalOverlays = document.querySelectorAll(".modal-overlay");
+    const closeButton = document.querySelectorAll(".close-btn");
+  
+    const buttons = document.querySelectorAll(".open-modal");
+    const offset = 20;
+  
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modalId = button.dataset.modal;
+        const modal = document.getElementById(modalId);
+        modal.style.display = "block";
+  
+        const targetSection = button.dataset.section;
+        const targetAnchor = document.getElementById(targetSection);
+  
+        // Scroll the modal content to the target anchor when the modal is opened with an offset
+        if (targetAnchor) {
+          const modalContent = modal.querySelector(".modal-content");
+          const targetPosition = targetAnchor.getBoundingClientRect().top;
+          const offsetPosition = targetPosition - modalContent.getBoundingClientRect().top + modalContent.scrollTop - offset;
+          modalContent.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  
+    closeButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        const modal = button.closest(".modal-overlay");
+        modal.style.display = "none";
+      });
+    });
+  
+    modalOverlays.forEach((modalOverlay) => {
+      modalOverlay.addEventListener("click", (event) => {
+        if (event.target === modalOverlay) {
+          modalOverlay.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  // Handles the opening/closing of the appropriate tab content on click
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.cts-btn.open-tab');
+    const tabButtons = document.querySelectorAll('.cts-btn.tab-selector');
+    const sections = document.querySelectorAll('.section.cts-tab-content');
+  
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const target = this.getAttribute('data-target');
+  
+        tabButtons.forEach(function(tabButton) {
+          if (tabButton.getAttribute('data-target') === target) {
+            tabButton.classList.add('active');
+          } else {
+            tabButton.classList.remove('active');
+          }
+        });
+  
+        sections.forEach(function(section) {
+          if (section.id === target) {
+            section.classList.add('active');
+          } else {
+            section.classList.remove('active');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<!-- Tippy.js (Tooltips) -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/translucent.css">
+
+<script>
+  // Handles the additional option tooltips
+  const tooltipConfig = {
+    allowHTML: true,
+    placement: 'auto',
+    maxWidth: 800,
+    theme: 'translucent',
+    zIndex: 99999,
+  };
+  
+  tippy('.edge-type-tooltip', {
+    content: '<div class="info"><h6 class="heading">Standard:</h6><p class="text">Our standard edge features a soft square profile that is familiar to cutting board users. The edges are rasped to remove the sharp corners making it safer for narrow kitchens and prep counters.</p><h6 class="heading">Half Bullnose:</h6><p class="text">The half-bullnose edge is rounded on one side and flat on the other. This configuration offers great runoff if you are going to be cutting over a sink or tub. It is ideal for customers who want the functionality of restaurant grade equipment with a utilitarian profile. If you require only some edges (instead of 4) rounded, please contact us by phone or email before submitting your order online.</p><h6 class="heading">Full Bullnose:</h6><p class="text">The full-bullnose edge is rounded on both sides and perfect for traditional kitchens. Boards with this edge are easy to lift off a flat counter. The curved finish is not only functional but is aesthetically perfect for customers who have a softer, more classic kitchen design. If you require only some edges (instead of all 8) rounded, please contact us by phone or email before submitting your order online.</p></div>',
+    ...tooltipConfig
+  });
+  
+  tippy('.radius-corners-tooltip', {
+    content: '<div class="info"><p class="text">The corner radius describes the dimension of rounded corners. The standard corner is no radius, or square. A corner radius is useful in high traffic areas where you want to avoid sharp contact points. If you require only some corners (instead of all 4) rounded please contact us by phone or email before submitting your order online.</p></div>',
+    ...tooltipConfig
+  });
+  
+  tippy('.handle-cutout-tooltip', {
+    content: '<div class="info"><p class="text">An optional handle hole can be added to any side you specify. The standard handle hole is cut 7/8" from the outer edge and centered. The typical dimensions of the handle hole are 6" x 1" with rasped edges for safety. These handle hole dimensions can however be customized to fit your specific needs. If you would like a customized handle hole or multiple handle holes, please contact us by phone or email before submitting your order online.</p></div>',
+    ...tooltipConfig
+  });
+  
+  tippy('.dripwell-tooltip', {
+    content: '<div class="info"><p class="text">The dripwell, or juice groove, is particularly helpful when preparing raw or cooked meats. The groove is neatly machined inside the perimeter of the cutting board and acts as a reservoir for fats and juices saving you from messy runoff on your countertop or table. If you would like a customized dripwell, please contact us by phone or email before submitting your order online.</p></div>',
+    ...tooltipConfig
+  });
+  
+  tippy('.rubber-feet-tooltip', {
+    content: '<div class="info"><p class="text">These reliable rubber feet will improve the safety and stability of your board ensuring a steady and slip-free cutting experience.</p></div>',
+    ...tooltipConfig
+  });
+</script>
+
+<script>
+  let isCustomSizing = false;
+  
+  // Toggles full sheets section and disables/resets additional options when choosing full sheet
+  document.addEventListener('DOMContentLoaded', function() {
+    const fullSheetsText = document.querySelector('.full-sheets-text');
+    const measurementWarning = document.querySelector('.measurement-warning');
+    const fullSheets = document.querySelector('.full-sheets');
+    const inputBoxes = document.querySelector('.input-boxes');
+  
+    const widthInput = inputBoxes.querySelector('.width-input');
+    const lengthInput = inputBoxes.querySelector('.length-input');
+    const selectedOptionText = document.querySelector('.label .selected-option-text');
+  
+    const shippingElements = document.querySelectorAll('.shipping');
+  
+    function updateSelectedOptionText() {
+      const width = widthInput.value;
+      const length = lengthInput.value;
+      
+      if (width === '' || length === '') {
+        selectedOptionText.textContent = ''; // Set text to blank if any input is empty
+      } else {
+        selectedOptionText.textContent = `${length}" x ${width}"`;
+      }
+    }
+  
+    widthInput.addEventListener('input', updateSelectedOptionText);
+    lengthInput.addEventListener('input', updateSelectedOptionText);
+  
+    const initialTabTexts = [];
+    const initialAdditionalTexts = [];
+    
+    // Store the initial text content for selectedOptionTextTab
+    const selectedOptionTextTabs = document.querySelectorAll('#additional-options-modal .tab-selector .selected-option-text');
+    selectedOptionTextTabs.forEach(textElement => {
+      initialTabTexts.push(textElement.textContent);
+    });
+    
+    // Store the initial text content for selectedOptionTextAdditional
+    const selectedOptionTextAdditionals = document.querySelectorAll('.section.additional-options .cts-btn .selected-option-text');
+    selectedOptionTextAdditionals.forEach(textElement => {
+      initialAdditionalTexts.push(textElement.textContent);
+    });
+  
+    fullSheetsText.addEventListener('click', function() {
+      const messageBox = document.querySelector('.message-box');
+      messageBox.style.display = 'none';
+  
+      clearSectionErrors(document.querySelector('.section.dimensions'));
+      clearSectionErrors(document.querySelector('.section.texture'));
+      clearSectionErrors(document.querySelector('.section.thickness'));
+      clearSectionErrors(document.querySelector('.section.color'));
+  
+      const priceElements = document.querySelectorAll('.price-value');
+  
+      priceElements.forEach(dynamicPriceElement => {
+        dynamicPriceElement.textContent = "$0.00";
+      });
+  
+      if (isCustomSizing) {
+        selectedOptionText.textContent = '';
+        widthInput.value = '';
+        lengthInput.value = '';
+  
+        fullSheetsText.textContent = 'View full sheets';
+        measurementWarning.style.display = 'block';
+        fullSheets.style.display = 'none';
+        inputBoxes.style.display = 'flex';
+  
+        shippingElements.forEach(element => {
+          const text = `(+$6.00 estimated shipping)`;
+          element.textContent = text;
+          element.classList.remove('warning');
+        });
+  
+        // Remove the 'active' class from buttons with the class 'cts-btn'
+        const activeButtons = fullSheets.querySelectorAll('.full-sheets .cts-btn.active');
+        activeButtons.forEach(button => button.classList.remove('active'));
+  
+        const additionalOptionButtons = document.querySelectorAll('.section.additional-options .cts-btn.open-tab');
+  
+        additionalOptionButtons.forEach(button => {
+          button.classList.remove('disabled');
+          button.removeAttribute('disabled', 'true');
+        });
+      } else {
+        const activeButton = fullSheets.querySelector('.full-sheets .cts-btn.active');
+        
+        if (activeButton) {
+          selectedOptionText.textContent = activeButton.textContent;
+        } else {
+          selectedOptionText.textContent = ''; // Reset text if no active button
+        }
+  
+        const additionalOptionButtons = document.querySelectorAll('.section.additional-options .cts-btn.open-tab');
+  
+        additionalOptionButtons.forEach(button => {
+          button.classList.add('disabled');
+          button.setAttribute('disabled', 'true');
+        });
+  
+        fullSheetsText.textContent = 'Enter custom sizing';
+        measurementWarning.style.display = 'none';
+        fullSheets.style.display = 'flex';
+        inputBoxes.style.display = 'none';
+  
+        shippingElements.forEach(element => {
+          const text = `(These dimensions may NOT qualify for free shipping)`;
+          element.textContent = text;
+          element.classList.add('warning');
+        });
+  
+        // Remove the 'active' class from all .cts-tab-content .cts-btn except the first one
+        const allButtonWrappers = document.querySelectorAll('.cts-tab-content .btn-wrapper');
+        allButtonWrappers.forEach(buttonWrapper => {
+          const buttons = buttonWrapper.querySelectorAll('.cts-btn');
+          buttons.forEach((button, index) => {
+            if (index === 0 && !activeButton) {
+              button.classList.add('active');
+            } else {
+              button.classList.remove('active');
+            }
+          });
+        });
+  
+        // Remove the 'selected' class from .tab-selector .underline
+        const underlineElements = document.querySelectorAll('.tab-selector .underline');
+        underlineElements.forEach(underline => underline.classList.remove('selected'));
+  
+        // Remove the 'selected' class from .section.additional-options .cts-btn .underline
+        const additionalOptionsUnderlines = document.querySelectorAll('.section.additional-options .cts-btn .underline');
+        additionalOptionsUnderlines.forEach(underline => underline.classList.remove('selected'));
+        
+        // Set default values for selectedOptionTextTab
+        selectedOptionTextTabs.forEach((textElement, index) => {
+          textElement.textContent = initialTabTexts[index];
+        });
+        
+        // Set default values for selectedOptionTextAdditional
+        selectedOptionTextAdditionals.forEach((textElement, index) => {
+          textElement.textContent = initialAdditionalTexts[index];
+        });
+      }
+  
+      const dimensionsSection = document.querySelector('.product-details .dimensions');
+      if (dimensionsSection.classList.contains('collapsed')) {
+        toggleSection(dimensionsSection);
+      }
+  
+      isCustomSizing = !isCustomSizing;
+    });
+  
+    function toggleSection(section) {
+      section.classList.toggle('collapsed');
+    }
+  });
+</script>
+
+<script>
+  // Handles the quantity box
+  const decrementButton = document.querySelector('.decrement');
+  const incrementButton = document.querySelector('.increment');
+  const quantityInput = document.querySelector('.quantity-input');
+  
+  decrementButton.addEventListener('click', () => {
+    updateQuantity(-1);
+  });
+  
+  incrementButton.addEventListener('click', () => {
+    updateQuantity(1);
+  });
+  
+  quantityInput.addEventListener('input', () => {
+    validateInput();
+  });
+  
+  quantityInput.addEventListener('blur', () => {
+    validateInput(true);
+  });
+  
+  quantityInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      validateInput(true);
+    }
+  });
+  
+  function updateQuantity(change) {
+    let currentValue = parseInt(quantityInput.value);
+    if (!isNaN(currentValue)) {
+      currentValue += change;
+      if (currentValue < 1) {
+        currentValue = 1;
+      } else if (currentValue > 999) {
+        currentValue = 999;
+      }
+      quantityInput.value = currentValue;
+      globalQuantity = currentValue;
+    }
+  }
+  
+  function validateInput(shouldResetOnEmpty) {
+    let currentValue = quantityInput.value;
+    currentValue = currentValue.replace(/\D/g, ''); // Remove non-numeric characters
+  
+    if (currentValue === "") {
+      if (shouldResetOnEmpty) {
+        quantityInput.value = "1";
+      }
+    } else {
+      const numericValue = parseInt(currentValue);
+  
+      if (isNaN(numericValue) || numericValue < 1) {
+        currentValue = "1";
+      } else if (numericValue > 999) {
+        currentValue = "999";
+      }
+  
+      quantityInput.value = currentValue;
+      globalQuantity = currentValue;
+    }
+  }
+</script>
+
+<script>
+  // Toggles thickness option values
+  document.addEventListener("DOMContentLoaded", function () {
+    const conversionText = document.querySelector(".conversion-text");
+    const thicknessButtons = document.querySelectorAll(".cts-btn.thickness-btn");
+  
+    let isFractionMode = false;
+  
+    function convertToFraction(decimal) {
+      const fractions = [
+        { decimal: 0.25, fraction: "1/4" },
+        { decimal: 0.375, fraction: "3/8" },
+        { decimal: 0.5, fraction: "1/2" },
+        { decimal: 0.625, fraction: "5/8" },
+        { decimal: 0.75, fraction: "3/4" },
+        { decimal: 1, fraction: "1" },
+      ];
+  
+      const matchedFraction = fractions.find((frac) => frac.decimal === decimal);
+      return matchedFraction ? matchedFraction.fraction + '"' : decimal + '"';
+    }
+  
+    function convertToDecimal(fractionString) {
+      const fractionWithoutQuote = fractionString.slice(0, -1);
+  
+      const fractions = [
+        { decimal: 0.25, fraction: "1/4" },
+        { decimal: 0.375, fraction: "3/8" },
+        { decimal: 0.5, fraction: "1/2" },
+        { decimal: 0.625, fraction: "5/8" },
+        { decimal: 0.75, fraction: "3/4" },
+        { decimal: 1, fraction: "1" },
+      ];
+  
+      const matchedFraction = fractions.find((frac) => frac.fraction === fractionWithoutQuote);
+      return matchedFraction ? matchedFraction.decimal + '"' : parseFloat(fractionWithoutQuote);
+    }
+  
+    function updateSelectedOptionText() {
+      const selectedOptionText = document.querySelectorAll(".thickness-text");
+  
+      selectedOptionText.forEach((element) => {
+        const textContent = element.textContent;
+        const decimalValue = parseFloat(textContent.slice(0, -1));
+        const updatedText = isFractionMode ? convertToFraction(decimalValue): convertToDecimal(textContent);
+  
+        element.textContent = updatedText;
+      });
+    }
+  
+    function toggleConversion() {
+      isFractionMode = !isFractionMode;
+  
+      const newText = isFractionMode ? "Convert to decimals" : "Convert to fractions";
+      conversionText.textContent = newText;
+  
+      updateSelectedOptionText();
+  
+      thicknessButtons.forEach((button) => {
+        const originalDecimal = parseFloat(button.getAttribute("data-thickness"));
+        button.textContent = isFractionMode ? convertToFraction(originalDecimal) : originalDecimal + '"';
+      });
+    }
+  
+    conversionText.addEventListener("click", toggleConversion);
+  });
+</script>
+
+<script>
+  // Handles additional option choices
+  const ctsButtons = document.querySelectorAll('.modal-content .cts-tab-content .cts-btn');
+  
+  ctsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tabSelector = document.querySelector('.modal-content .tab-selector.active');
+      const targetSection = tabSelector.getAttribute('data-target');
+      const section = document.querySelector(`.modal-content .tab-selector[data-target="${targetSection}"]`);
+      const additionalOptionsSection = document.querySelector(`.section.additional-options .cts-btn[data-target="${targetSection}"]`);
+  
+      if (section && additionalOptionsSection) {
+        const selectedOptionTextTab = section.querySelector('.selected-option-text');
+        const selectedOptionTextAdditional = additionalOptionsSection.querySelector('.selected-option-text');
+  
+        const optionText = button.querySelector('.option').textContent;
+        const match = optionText.match(/\((.*?)\)/g); // Match all sets of parentheses
+        let cleanedOptionText = optionText;
+  
+        if (match && match.length >= 2) {
+          cleanedOptionText = match[0].replace(/^\(/, '').replace(/\)$/, ''); // Extract content from first set of parentheses
+        } else if (match && match.length === 1) {
+          cleanedOptionText = optionText.replace(/\s*\([^)]*\)\s*$/, ''); // Remove last set of parentheses
+        }
+  
+        selectedOptionTextTab.textContent = cleanedOptionText;
+        selectedOptionTextAdditional.textContent = cleanedOptionText;
+  
+        const tabSelectorUnderline = section.querySelector('.tab-selector.active .underline');
+        if (tabSelectorUnderline) {
+          tabSelectorUnderline.classList.add('selected');
+        }
+  
+        if (!button.previousElementSibling) {
+          const tabSelectorUnderline = section.querySelector('.tab-selector.active .underline');
+          if (tabSelectorUnderline) {
+            tabSelectorUnderline.classList.remove('selected');
+          }
+        }
+  
+        const additionalOptionsUnderline = document.querySelector(`.section.additional-options .cts-btn[data-target="${targetSection}"] .underline`);
+        if (additionalOptionsUnderline) {
+          additionalOptionsUnderline.classList.add('selected');
+        }
+  
+        if (!button.previousElementSibling) {
+          const tabSelectorUnderline = document.querySelector(`.section.additional-options .cts-btn[data-target="${targetSection}"] .underline`);
+          if (tabSelectorUnderline) {
+            tabSelectorUnderline.classList.remove('selected');
+          }
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  // Disables and resets rubber feet when thickness is below 1/2"
+  function updateRubberFeetOptions() {
+    setTimeout(() => {
+      const currentThickness = parseFloat(document.querySelector('.thickness-btn.active').textContent);
+      const rubberFeetButtons = document.querySelectorAll('.rubber-feet .cts-btn');
+      const feetUnavailableWarning = document.querySelector('.feet-unavailable-warning');
+  
+      rubberFeetButtons.forEach(button => {
+        const optionValue = button.getAttribute('data-rubber-feet');
+  
+        if (currentThickness < 0.5) {
+          if (optionValue === 'No') {
+            button.classList.add('active');
+          } else {
+            button.classList.remove('active');
+            button.classList.add('disabled');
+            button.setAttribute('disabled', 'disabled');
+          }
+        } else {
+          button.classList.remove('disabled');
+          button.removeAttribute('disabled');
+        }
+      });
+  
+      if (currentThickness < 0.5) {
+        feetUnavailableWarning.style.display = 'block';
+        
+        const selectedOptionTextTab = document.querySelector('#additional-options-modal .tab-selector[data-target="rubber-feet"] .selected-option-text');
+        const selectedOptionTextAdditional = document.querySelector('.section.additional-options .cts-btn[data-target="rubber-feet"] .selected-option-text');
+  
+        selectedOptionTextTab.textContent = 'No';
+        selectedOptionTextAdditional.textContent = 'No';
+  
+        const tabSelectorUnderline = document.querySelector('.tab-selector.active .underline');
+        if (tabSelectorUnderline) {
+          tabSelectorUnderline.classList.remove('selected');
+        }
+        
+        const additionalOptionsUnderline = document.querySelector('.section.additional-options .cts-btn[data-target="rubber-feet"] .underline');
+        if (additionalOptionsUnderline) {
+          additionalOptionsUnderline.classList.remove('selected');
+        }
+      } else {
+        feetUnavailableWarning.style.display = 'none';
+      }
+    }, 100); // Introduce a very small delay to allow class changes to propagate
+  }
+  
+  const thicknessButtons = document.querySelectorAll('.section.thickness .cts-btn');
+  thicknessButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      updateRubberFeetOptions();
+    });
+  });
+</script>
+
+<script>
+  // Fetches product data
+  const combinationsToSkus = {
+    "Pebbled-0.25-Natural": "PE454",
+    "Pebbled-0.375-Natural": "PE378",
+    "Pebbled-0.5-Natural": "PE10",
+    "Pebbled-0.625-Natural": "PE67",
+    "Pebbled-0.75-Natural": "PE68",
+    "Pebbled-1-Natural": "PE69",
+  
+    "Pebbled-0.25-Polar_White": "PE214",
+    "Pebbled-0.375-Polar_White": "PE215",
+    "Pebbled-0.5-Polar_White": "PE216",
+    "Pebbled-0.625-Polar_White": "PE557",
+    "Pebbled-0.75-Polar_White": "PE217",
+    "Pebbled-1-Polar_White": "PE218",
+  
+    "Pebbled-0.25-Black": 'PE264',
+    "Pebbled-0.375-Black": 'PE265',
+    "Pebbled-0.5-Black": "PE471",
+    "Pebbled-0.625-Black": null,
+    "Pebbled-0.75-Black": 'PE267',
+    "Pebbled-1-Black": 'PE268',
+  
+    "Pebbled-0.25-Gray": "PE229",
+    "Pebbled-0.375-Gray": "PE230",
+    "Pebbled-0.5-Gray": "PE231",
+    "Pebbled-0.625-Gray": null,
+    "Pebbled-0.75-Gray": "PE232",
+    "Pebbled-1-Gray": "PE233",
+  
+    "Pebbled-0.25-Beige": null,
+    "Pebbled-0.375-Beige": null,
+    "Pebbled-0.5-Beige": "PE447",
+    "Pebbled-0.625-Beige": null,
+    "Pebbled-0.75-Beige": 'PE568',
+    "Pebbled-1-Beige": null,
+  
+    "Pebbled-0.25-Blue": null,
+    "Pebbled-0.375-Blue": null,
+    "Pebbled-0.5-Blue": "PE110",
+    "Pebbled-0.625-Blue": null,
+    "Pebbled-0.75-Blue": "PE312",
+    "Pebbled-1-Blue": null,
+  
+    "Pebbled-0.25-Green": "PE556",
+    "Pebbled-0.375-Green": null,
+    "Pebbled-0.5-Green": "PE420",
+    "Pebbled-0.625-Green": null,
+    "Pebbled-0.75-Green": "PE534", // PE313
+    "Pebbled-1-Green": null,
+  
+    "Pebbled-0.25-Red": null,
+    "Pebbled-0.375-Red": null,
+    "Pebbled-0.5-Red": "PE469",
+    "Pebbled-0.625-Red": null,
+    "Pebbled-0.75-Red": "PE507",
+    "Pebbled-1-Red": "PE541",
+  
+    "Pebbled-0.25-Yellow": 'PE571',
+    "Pebbled-0.375-Yellow": null,
+    "Pebbled-0.5-Yellow": "PE470",
+    "Pebbled-0.625-Yellow": null,
+    "Pebbled-0.75-Yellow": "PE308",
+    "Pebbled-1-Yellow": null,
+  
+    "Pebbled-0.25-Seafoam": "PE234",
+    "Pebbled-0.375-Seafoam": "PE235",
+    "Pebbled-0.5-Seafoam": "PE236",
+    "Pebbled-0.625-Seafoam": null,
+    "Pebbled-0.75-Seafoam": "PE237",
+    "Pebbled-1-Seafoam": "PE238",
+  
+    "Pebbled-0.25-Dark_Blue": "PE570",
+    "Pebbled-0.375-Dark_Blue": null,
+    "Pebbled-0.5-Dark_Blue": "PE482",
+    "Pebbled-0.625-Dark_Blue": null,
+    "Pebbled-0.75-Dark_Blue": "PE531",
+    "Pebbled-1-Dark_Blue": null,
+  
+    "Pebbled-0.25-Dark_Green": "PE567",
+    "Pebbled-0.375-Dark_Green": null,
+    "Pebbled-0.5-Dark_Green": "PE481",
+    "Pebbled-0.625-Dark_Green": null,
+    "Pebbled-0.75-Dark_Green": "PE534",
+    "Pebbled-1-Dark_Green": null,
+  
+    "Pebbled-0.25-Dark_Red": "PE572",
+    "Pebbled-0.375-Dark_Red": null,
+    "Pebbled-0.5-Dark_Red": "PE532",
+    "Pebbled-0.625-Dark_Red": null,
+    "Pebbled-0.75-Dark_Red": "PE508",
+    "Pebbled-1-Dark_Red": null,
+  
+    "Pebbled-0.25-Dark_Yellow": "PE571",
+    "Pebbled-0.375-Dark_Yellow": null,
+    "Pebbled-0.5-Dark_Yellow": "PE518",
+    "Pebbled-0.625-Dark_Yellow": null,
+    "Pebbled-0.75-Dark_Yellow": null,
+    "Pebbled-1-Dark_Yellow": null,
+  
+    "Pebbled-0.25-Sandshade": "PE562",
+    "Pebbled-0.375-Sandshade": null,
+    "Pebbled-0.5-Sandshade": "PE520",
+    "Pebbled-0.625-Sandshade": null,
+    "Pebbled-0.75-Sandshade": "PE537",
+    "Pebbled-1-Sandshade": null,
+  
+    "Smooth-0.25-Natural": "PE33",
+    "Smooth-0.375-Natural": "PE60",
+    "Smooth-0.5-Natural": 'PE19',
+    "Smooth-0.625-Natural": "PE61",
+    "Smooth-0.75-Natural": null, // PE20
+    "Smooth-1-Natural": "PE21",
+  
+    "Smooth-0.25-Black": "PE169",
+    "Smooth-0.375-Black": "PE170",
+    "Smooth-0.5-Black": "PE171",
+    "Smooth-0.625-Black": null,
+    "Smooth-0.75-Black": "PE172",
+    "Smooth-1-Black": "PE173",
+  };
+  
+  const productData = {};
+  
+  async function fetchProductData() {
+    try {
+      const response = await fetch('https://cut-to-size.herokuapp.com/products');
+      const data = await response.json();
+  
+      data.forEach(product => {
+        productData[product.sku] = product;
+      });
+  
+      for (const combination in combinationsToSkus) {
+        const sku = combinationsToSkus[combination];
+      }
+  
+      updateProductInfo();
+    } catch (error) {
+      console.error('Error fetching product data:', error);
+    }
+  }
+  
+  fetchProductData();
+</script>
+
+<script>
+  // Dynamically updates option buttons based on current selection
+  function updateButtons(texture, thickness, color) {
+    const textureButtons = document.querySelectorAll('.product-options .texture .cts-btn');
+    
+    textureButtons.forEach(button => {
+      const texture = button.getAttribute('data-texture');
+      const sku = combinationsToSkus[`${texture}-${thickness}-${color}`];
+      
+      if (!sku || (productData[sku] && productData[sku].inventory.length === 0)) {
+        button.classList.add('disabled');
+      } else {
+        button.classList.remove('disabled');
+      }
+    });
+  
+    const thicknessButtons = document.querySelectorAll('.product-options .thickness .cts-btn');
+    
+    thicknessButtons.forEach(button => {
+      const thickness = button.getAttribute('data-thickness');
+      const sku = combinationsToSkus[`${texture}-${thickness}-${color}`];
+      
+      if (!sku || (productData[sku] && productData[sku].inventory.length === 0)) {
+        button.classList.add('disabled');
+      } else {
+        button.classList.remove('disabled');
+      }
+    });
+  
+    const colorButtons = document.querySelectorAll('.product-options .color .cts-btn');
+    
+    colorButtons.forEach(button => {
+      const color = button.getAttribute('data-color');
+      const sku = combinationsToSkus[`${texture}-${thickness}-${color}`];
+      
+      if (!sku || (productData[sku] && productData[sku].inventory.length === 0)) {
+        button.classList.add('disabled');
+      } else {
+        button.classList.remove('disabled');
+      }
+    });
+  }
+  
+  document.querySelectorAll('.product-options .texture .cts-btn, .product-options .thickness .cts-btn, .product-options .color .cts-btn')
+    .forEach(button => {
+      button.addEventListener('click', () => {
+        setTimeout(() => {
+          const selectedTexture = document.querySelector('.product-options .texture .cts-btn.active').getAttribute('data-texture');
+          const selectedThickness = document.querySelector('.product-options .thickness .cts-btn.active').getAttribute('data-thickness');
+          const selectedColor = document.querySelector('.product-options .color .cts-btn.active').getAttribute('data-color');
+  
+          updateButtons(selectedTexture, selectedThickness, selectedColor);
+        }, 10);
+      });
+    });
+</script>
+
+<script>
+  // Cut-to-Size functionality
+  document.querySelectorAll('.cts-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      setTimeout(() => {
+        updateProductInfo();
+      }, 10);
+    });
+  });
+  
+  const fullSheets = document.querySelector('.full-sheets');
+  fullSheets.addEventListener('click', event => {
+    if (event.target.classList.contains('cts-btn')) {
+      setTimeout(() => {
+        updateProductInfo();
+      }, 10);
+    }
+  });
+  
+  function getBaseSKU(texture, thickness, color) {
+    return combinationsToSkus[`${texture}-${thickness}-${color}`] || null;
+  }
+  
+  const lengthInput = document.querySelector('.length-input');
+  const widthInput = document.querySelector('.width-input');
+  
+  lengthInput.addEventListener('input', () => {
+    updateProductInfo();
+  });
+  
+  widthInput.addEventListener('input', () => {
+    updateProductInfo();
+  });
+  
+  function createSizeButton(size) {
+    const [length, width] = size.split('x').map(dim => dim.trim());
+    const sizeButton = document.createElement('button');
+    sizeButton.classList.add('cts-btn', 'full-sheet');
+    sizeButton.textContent = `${length}" x ${width}"`;
+    return sizeButton;
+  }
+  
+  function updateFullSheetButtons(newAvailableSizes) {
+    const btnWrapper = document.querySelector('.full-sheets .btn-wrapper');
+    const currentSizeButtons = btnWrapper.querySelectorAll('.cts-btn.full-sheet');
+    const currentAvailableSizes = Array.from(currentSizeButtons).map(button => button.textContent);
+  
+    // Check if the available sizes have changed
+    const sizesChanged = !arraysEqual(currentAvailableSizes, newAvailableSizes);
+  
+    if (sizesChanged) {
+      btnWrapper.innerHTML = ''; // Clear any existing content
+  
+      if (newAvailableSizes.length > 0) {
+        newAvailableSizes.forEach(size => {
+          const sizeButton = createSizeButton(size);
+          btnWrapper.appendChild(sizeButton);
+        });
+  
+        addClickEventToButtons('.full-sheets');
+  
+        // Hide the out-of-stock warning if there are available sizes
+        const outOfStockWarning = document.querySelector('.out-of-stock-warning');
+        if (outOfStockWarning) {
+          outOfStockWarning.style.display = 'none';
+        }
+      } else {
+        // Display the out-of-stock warning if there are no available sizes
+        const outOfStockWarning = document.querySelector('.out-of-stock-warning');
+        if (outOfStockWarning) {
+          outOfStockWarning.style.display = 'flex';
+        }
+      }
+    }
+  }
+  
+  // Function to check if two arrays are equal
+  function arraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+      return false;
+    }
+    
+    for (let i = 0; i < arr1.length; i++) {
+      const trimmedValue = arr1[i].replace(/"/g, '').trim(); // Remove quotes and trim whitespace
+      if (trimmedValue !== arr2[i]) {
+        return false;
+      }
+    }
+    
+    return true;
+  }
+  
+  // Define global variables
+  let globalTitle = "";
+  let globalSKU = "";
+  let globalPrice = 0.00;
+  let globalThickness = 0.5;
+  let globalLength = 0.00;
+  let globalWidth = 0.00;
+  let globalWeight = 0.00;
+  let globalQuantity = 1;
+  
+  // Function to calculate weight
+  function calculateWeight(length, width, selectedThickness) {
+    return (length * width * selectedThickness) * 0.038;
+  }
+  
+  // Function to update global variables
+  function updateGlobalVariables(sku, price, weight) {
+    const selectedTexture = document.querySelector('.product-options .texture .cts-btn.active').getAttribute('data-texture');
+    const selectedThickness = document.querySelector('.product-options .thickness .cts-btn.active').getAttribute('data-thickness');
+    const selectedColor = document.querySelector('.product-options .color .cts-btn.active').getAttribute('data-color');
+  
+    // Replace underscores with spaces in the selectedColor variable
+    const formattedColor = selectedColor.replace(/_/g, ' ');
+  
+    const baseSKU = getBaseSKU(selectedTexture, selectedThickness, selectedColor);
+    const product = productData[baseSKU];
+    console.log(product);
+  
+    globalSKU = sku;
+    globalPrice = price.toFixed(2);
+    globalWeight = weight.toFixed(2);
+  
+    const optionStringMap = {
+      'ETHB': 'Half Bullnose',
+      'ETFB': 'Full Bullnose',
+      'RC.5': '0.5" Corner Radius',
+      'RC.75': '0.75" Corner Radius',
+      'RC1': '1" Corner Radius',
+      'RC2': '2" Corner Radius',
+      'HASS': 'Handle on Short Side',
+      'HALS': 'Handle on Long Side',
+      'DW': 'Dripwell'
+    };
+  
+    // Check if the SKU contains the specific option strings
+    const optionStrings = [];
+    for (const optionString in optionStringMap) {
+      if (sku.includes(optionString)) {
+        optionStrings.push(optionStringMap[optionString]);
+      }
+    }
+  
+    // Create the additional string to add to the SKU, if any option strings were found
+    const additionalString = optionStrings.length > 0 ? ' (' + optionStrings.join(', ') + ')' : '';
+  
+    globalTitle = `Custom HDPE Cutting Board (${selectedTexture}) - ${formattedColor}, ${selectedThickness}" Thick, ${globalWidth}" W x ${globalLength}" L ${additionalString}`;
+  
+    console.log('SKU: ' + globalSKU);
+    console.log('Price: ' + globalPrice);
+    console.log('Weight: ' + globalWeight);
+  }
+  
+  function updateProductInfo() {
+    const selectedTexture = document.querySelector('.product-options .texture .cts-btn.active').getAttribute('data-texture');
+    const selectedThickness = document.querySelector('.product-options .thickness .cts-btn.active').getAttribute('data-thickness');
+    const selectedColor = document.querySelector('.product-options .color .cts-btn.active').getAttribute('data-color');
+    const lengthInputValue = lengthInput.value.trim();
+    const widthInputValue = widthInput.value.trim();
+  
+    updateButtons(selectedTexture, selectedThickness, selectedColor);
+    updateShipping();
+  
+    let price = 0.00;
+    let weight = 0.00;
+  
+    const baseSKU = getBaseSKU(selectedTexture, selectedThickness, selectedColor);
+    let fullSKU = baseSKU;
+  
+    // Replace underscores with hyphens and convert color to lowercase
+    const transformedColor = selectedColor.replace(/_/g, '-').toLowerCase();
+  
+    const filename = `${transformedColor}.png`.toLowerCase();
+    const imageURL = `https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/${filename}`;
+  
+    globalThickness = selectedThickness;
+  
+    const productImgElement = document.querySelector('.product-image img');
+    productImgElement.src = imageURL;
+  
+    if (!isCustomSizing) {
+      if (widthInputValue && lengthInputValue) {
+        const lowerDimension = Math.min(parseFloat(widthInputValue), parseFloat(lengthInputValue));
+        const higherDimension = Math.max(parseFloat(widthInputValue), parseFloat(lengthInputValue));
+  
+        globalLength = higherDimension;
+        globalWidth = lowerDimension;
+  
+        fullSKU += `_W${lowerDimension}L${higherDimension}`;
+  
+        weight = calculateWeight(widthInputValue, lengthInputValue, selectedThickness);
+      }
+    } else {
+      const activeFullSheetButton = document.querySelector('.full-sheets .cts-btn.active');
+      if (activeFullSheetButton) {
+        const dimensions = activeFullSheetButton.textContent.trim().replace(/"/g, '');
+        const [width, length] = dimensions.split(' x ');
+  
+        // Ensure W is the lower value and L is the higher value
+        const numericWidth = parseFloat(width);
+        const numericLength = parseFloat(length);
+        const lowerDimension = Math.min(numericWidth, numericLength);
+        const higherDimension = Math.max(numericWidth, numericLength);
+  
+        globalLength = higherDimension;
+        globalWidth = lowerDimension;
+  
+        fullSKU += `_W${lowerDimension}L${higherDimension}`;
+  
+        weight = calculateWeight(numericWidth, numericLength, selectedThickness);
+      }
+    }
+  
+    const selectedEdgeType = document.querySelector('.product-options .cts-btn.active[data-edge-type]');
+    const selectedHandleCutout = document.querySelector('.product-options .cts-btn.active[data-handle-cutout]');
+    const selectedRadiusCorners = document.querySelector('.product-options .cts-btn.active[data-radius-corners]');
+    const selectedDripwell = document.querySelector('.product-options .cts-btn.active[data-dripwell]');
+  
+    function appendOptionToSKU(attribute, value) {
+      const customValue = getCustomValue(attribute, value);
+      if (customValue) {
+        fullSKU += `O${customValue}`;
+      }
+    }
+  
+    appendOptionToSKU('data-edge-type', selectedEdgeType?.getAttribute('data-edge-type'));
+    appendOptionToSKU('data-handle-cutout', selectedHandleCutout?.getAttribute('data-handle-cutout'));
+    appendOptionToSKU('data-radius-corners', selectedRadiusCorners?.getAttribute('data-radius-corners'));
+    appendOptionToSKU('data-dripwell', selectedDripwell?.getAttribute('data-dripwell'));
+  
+    const priceElements = document.querySelectorAll('.price-value');
+    const maxLengthElement = document.querySelector('.max.length');
+    const maxWidthElement = document.querySelector('.max.width');
+  
+    // Reset .max.length and .max.width to 0 initially
+    maxLengthElement.textContent = '(Max: 0")';
+    maxWidthElement.textContent = '(Max: 0")';
+
+    // Smooth blemishes disclaimer
+    if (selectedTexture == 'Smooth') {
+      const addToCartButton = document.querySelector('.add-to-cart');
+      const addToCartButtonMobile = document.querySelector('.mobile .add-to-cart');
+      
+      const messageBox = document.querySelector('.info-box');
+      const warningList = document.querySelector('.warning-list');
+
+      messageBox.style.display = 'block';
+      warningList.innerHTML = '';
+      warningList.innerHTML += '<div style="display: flex; flex-direction: column; align-items: center"><p>Smooth HDPE may expose evident surface blemishes/scratches and is <strong>NOT recommended</strong> for applications where visual aesthetics are necessary</p><div style="padding: 10px 25px;"><input type="checkbox" id="acknowledgeCheckbox"><label for="acknowledgeCheckbox" style="margin-left: 5px">I acknowledge the warning above</label></div>';
+
+      // Disable add-to-cart initially
+      addToCartButton.disabled = true;
+      addToCartButtonMobile.disabled = true;
+
+      const acknowledgeCheckbox = document.getElementById('acknowledgeCheckbox');
+
+      // Add event listener to the checkbox
+      acknowledgeCheckbox.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+          addToCartButton.disabled = false;
+          addToCartButtonMobile.disabled = false;
+        } else {
+          addToCartButton.disabled = true;
+          addToCartButtonMobile.disabled = true;
+        }
+      })
+    } else {
+      const addToCartButton = document.querySelector('.add-to-cart');
+      const addToCartButtonMobile = document.querySelector('.mobile .add-to-cart');
+
+      const messageBox = document.querySelector('.info-box');
+      const warningList = document.querySelector('.warning-list');
+
+      messageBox.style.display = 'none';
+      warningList.innerHTML = '';
+
+      addToCartButton.disabled = false;
+      addToCartButtonMobile.disabled = false;
+    }
+  
+    // New code to update .max.length and .max.width based on available inventory
+    if (baseSKU) {
+      const product = productData[baseSKU];
+  
+      if (product) {
+        const availableSizes = product.inventory.filter(item => item.quantity > 0);
+  
+        if (availableSizes.length > 0) {
+          const largestSize = availableSizes.reduce((prev, current) => {
+            const prevSquareFootage = prev.length * prev.width;
+            const currentSquareFootage = current.length * current.width;
+            return prevSquareFootage >= currentSquareFootage ? prev : current;
+          });
+  
+          maxLengthElement.textContent = `(Max: ${largestSize.length}")`;
+          maxWidthElement.textContent = `(Max: ${largestSize.width}")`;
+  
+          const validSizes = availableSizes.filter(item => {
+            const sizeString = `${item.length} x ${item.width}`;
+            return sizeString === "120 x 60" || sizeString === "120 x 48" || sizeString === "96 x 60" || sizeString === "96 x 54" || sizeString === "96 x 48";
+          });
+  
+          if (validSizes.length > 0) {
+            const baseSizes = validSizes.map(item => `${item.length} x ${item.width}`);
+            updateFullSheetButtons(baseSizes);
+          } else {
+            const largestAvailableSize = availableSizes.reduce((prev, current) => {
+              const prevSquareFootage = prev.length * prev.width;
+              const currentSquareFootage = current.length * current.width;
+              return prevSquareFootage >= currentSquareFootage ? prev : current;
+            });
+  
+            const largestAvailableSizeString = `${largestAvailableSize.length} x ${largestAvailableSize.width}`;
+            updateFullSheetButtons([largestAvailableSizeString]);
+          }
+        } else {
+          updateFullSheetButtons([]);
+        }
+      }
+    } else {
+      updateFullSheetButtons([]);
+    }
+  
+    if(!isCustomSizing) {
+      priceElements.forEach(dynamicPriceElement => {
+        const priceDifferenceElement = document.querySelector('.price-difference.discount');
+  
+        if (baseSKU) {
+          const product = productData[baseSKU];
+  
+          if (product && product.inventory.length > 0) {
+            const basePrice = product.basePrice;
+            const lengthInInches = parseFloat(lengthInputValue);
+            const widthInInches = parseFloat(widthInputValue);
+  
+            price = basePrice;
+  
+            if (!isNaN(lengthInInches) && !isNaN(widthInInches)) {
+              const squareFootage = (lengthInInches * widthInInches) / 144;
+              price *= squareFootage;
+  
+              const markupMultiplier = 3.98;
+              price *= markupMultiplier;
+  
+              const cuttingCharge = 10.00;
+              price += cuttingCharge;
+            } else {
+              price = 0.00;
+            }
+  
+            const additionalOptions = ['data-edge-type', 'data-radius-corners', 'data-handle-cutout', 'data-dripwell', 'data-rubber-feet'];
+            let handleDripwellDiscount = false;
+            let selectedDripwell = false;
+  
+            additionalOptions.forEach(attr => {
+              const activeOption = document.querySelector(`.product-options .cts-btn.active[${attr}]`);
+              if (activeOption) {
+                const customValue = getCustomValue(attr, activeOption.getAttribute(attr));
+                if (customValue) {
+                  if (customValue === 'HASS' || customValue === 'HALS') {
+                    handleDripwellDiscount = true;
+                  }
+                  if (customValue === 'DW') {
+                    selectedDripwell = true;
+                  }
+                  const optionPrice = additionalOptionPrices[customValue];
+                  if (optionPrice !== undefined) {
+                    price += optionPrice;
+                  }
+                }
+              }
+            });
+  
+            // Adjust DW price if HASS or HALS is present along with DW
+            if (handleDripwellDiscount) {
+              // Update the price difference element
+              const originalValue = additionalOptionPrices['DW'];
+              if (originalValue !== undefined) {
+                priceDifferenceElement.innerHTML = '(+$15 - Discount)';
+              }
+  
+              if (selectedDripwell) {
+                const dwPriceAdjustment = 5.00;
+                price -= dwPriceAdjustment;
+              }
+            } else {
+              priceDifferenceElement.textContent = "(+$20)";
+            }
+  
+            dynamicPriceElement.textContent = "$" + price.toFixed(2);
+          } else {
+            price = 0.00;
+  
+            const additionalOptions = ['data-edge-type', 'data-radius-corners', 'data-handle-cutout', 'data-dripwell', 'data-rubber-feet'];
+            let handleDripwellDiscount = false;
+            let selectedDripwell = false;
+  
+            additionalOptions.forEach(attr => {
+              const activeOption = document.querySelector(`.product-options .cts-btn.active[${attr}]`);
+              if (activeOption) {
+                const customValue = getCustomValue(attr, activeOption.getAttribute(attr));
+                if (customValue) {
+                  if (customValue === 'HASS' || customValue === 'HALS') {
+                    handleDripwellDiscount = true;
+                  }
+                  if (customValue === 'DW') {
+                    selectedDripwell = true;
+                  }
+                  const optionPrice = additionalOptionPrices[customValue];
+                  if (optionPrice !== undefined) {
+                    price += optionPrice;
+                  }
+                }
+              }
+            });
+  
+            // Adjust DW price if HASS or HALS is present along with DW
+            if (handleDripwellDiscount) {
+              // Update the price difference element
+              const originalValue = additionalOptionPrices['DW'];
+              if (originalValue !== undefined) {
+                priceDifferenceElement.innerHTML = '(+$15 - Discount)';
+              }
+  
+              if (selectedDripwell) {
+                const dwPriceAdjustment = 5.00;
+                price -= dwPriceAdjustment;
+              }
+            } else {
+              priceDifferenceElement.textContent = "(+$20)";
+            }
+  
+            dynamicPriceElement.textContent = "$" + price.toFixed(2);
+          }
+        } else {
+          price = 0.00;
+  
+          const additionalOptions = ['data-edge-type', 'data-radius-corners', 'data-handle-cutout', 'data-dripwell', 'data-rubber-feet'];
+            let handleDripwellDiscount = false;
+            let selectedDripwell = false;
+  
+            additionalOptions.forEach(attr => {
+              const activeOption = document.querySelector(`.product-options .cts-btn.active[${attr}]`);
+              if (activeOption) {
+                const customValue = getCustomValue(attr, activeOption.getAttribute(attr));
+                if (customValue) {
+                  if (customValue === 'HASS' || customValue === 'HALS') {
+                    handleDripwellDiscount = true;
+                  }
+                  if (customValue === 'DW') {
+                    selectedDripwell = true;
+                  }
+                  const optionPrice = additionalOptionPrices[customValue];
+                  if (optionPrice !== undefined) {
+                    price += optionPrice;
+                  }
+                }
+              }
+            });
+  
+            // Adjust DW price if HASS or HALS is present along with DW
+            if (handleDripwellDiscount) {
+              // Update the price difference element
+              const originalValue = additionalOptionPrices['DW'];
+              if (originalValue !== undefined) {
+                priceDifferenceElement.innerHTML = '(+$15 - Discount)';
+              }
+  
+              if (selectedDripwell) {
+                const dwPriceAdjustment = 5.00;
+                price -= dwPriceAdjustment;
+              }
+            } else {
+              priceDifferenceElement.textContent = "(+$20)";
+            }
+  
+            dynamicPriceElement.textContent = "$" + price.toFixed(2);
+        }
+      });
+    } else {
+      priceElements.forEach(dynamicPriceElement => {
+        price = 0.00;
+  
+        if (baseSKU) {
+          const product = productData[baseSKU];
+  
+          if (product && product.inventory.length > 0) {
+            const activeFullSheetButton = document.querySelector('.full-sheets .cts-btn.active');
+            if (activeFullSheetButton) {
+              const dimensions = activeFullSheetButton.textContent.trim().replace(/"/g, '');
+              const [width, length] = dimensions.split(' x ');
+  
+              // Ensure W is the lower value and L is the higher value
+              const numericWidth = parseFloat(width);
+              const numericLength = parseFloat(length);
+              const widthInInches = Math.min(numericWidth, numericLength);
+              const lengthInInches = Math.max(numericWidth, numericLength);
+  
+              const basePrice = product.basePrice;
+  
+              price = basePrice;
+  
+              if (!isNaN(lengthInInches) && !isNaN(widthInInches)) {
+                const squareFootage = (lengthInInches * widthInInches) / 144;
+                price *= squareFootage;
+  
+                const markupMultiplier = 2.98;
+                price *= markupMultiplier;
+  
+                const cuttingCharge = 0.00;
+                price += cuttingCharge;
+              }
+            } else {
+              price = 0.00;
+            }
+          } else {
+            price = 0.00;
+          }
+        } else {
+          price = 0.00;
+        }
+  
+        dynamicPriceElement.textContent = "$" + price.toFixed(2);
+      });
+    }
+  
+    updateGlobalVariables(fullSKU, price, weight);
+  }
+  
+  function getCustomValue(attribute, value) {
+    if (attribute === 'data-edge-type') {
+      if (value === 'Half_Bullnose') return 'ETHB';
+      if (value === 'Full_Bullnose') return 'ETFB';
+    }
+  
+    if (attribute === 'data-radius-corners') {
+      if (value === '0.5') return 'RC.5';
+      if (value === '0.75') return 'RC.75';
+      if (value === '1') return 'RC1';
+      if (value === '2') return 'RC2';
+    }
+  
+    if (attribute === 'data-handle-cutout') {
+      if (value === 'Yes_Short') return 'HASS';
+      if (value === 'Yes_Long') return 'HALS';
+    }
+  
+    if (attribute === 'data-dripwell') {
+      if (value === 'Yes') return 'DW';
+    }
+  
+    if (attribute === 'data-rubber-feet') {
+      if (value === 'Separate') return 'Separate';
+      if (value === 'Installed') return 'Installed';
+    }
+  
+    return null;
+  }
+  
+  const additionalOptionPrices = {
+    'ETHB': 20.00,
+    'ETFB': 20.00,
+    'RC.5': 10.00,
+    'RC.75': 10.00,
+    'RC1': 10.00,
+    'RC2': 10.00,
+    'HASS': 20.00,
+    'HALS': 20.00,
+    'DW': 20.00,
+    'Separate': 3.99,
+    'Installed': 13.99
+  };
+  
+  function markSectionWithError(section) {
+    const label = section.querySelector('.label');
+    if (label) {
+      label.classList.add('error');
+    }
+  }
+  
+  function clearSectionErrors(section) {
+    const lengthError = document.querySelector('.length-input');
+    const widthError = document.querySelector('.width-input');
+    const messageBox = document.querySelector('.message-box');
+    const errorList = document.querySelector('.error-list');
+    
+    lengthError.classList.remove('error');
+    widthError.classList.remove('error');
+    errorList.innerHTML = '';
+    messageBox.style.display = 'none';
+  
+    const label = section.querySelector('.label');
+    if (label) {
+      label.classList.remove('error');
+    }
+  }
+  
+  // Keep track of the previously selected buttons (default)
+  let prevSelectedTexture = 'Pebbled';
+  let prevSelectedThickness = 0.5;
+  let prevSelectedColor = 'Natural';
+  
+  // Add event listeners to the active buttons
+  document.addEventListener('click', (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.matches('.section.dimensions .cts-btn')) {
+      clearSectionErrors(document.querySelector('.section.dimensions'));
+    }
+  });
+  
+  document.querySelectorAll('.section.texture .cts-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const newSelectedTexture = button.getAttribute('data-texture');
+      if (prevSelectedTexture !== newSelectedTexture) {
+        prevSelectedTexture = newSelectedTexture;
+        clearSectionErrors(document.querySelector('.section.dimensions'));
+        clearSectionErrors(document.querySelector('.section.texture'));
+        clearSectionErrors(document.querySelector('.section.thickness'));
+        clearSectionErrors(document.querySelector('.section.color'));
+  
+        // Clear active class from .cts-btn elements in .section.full-sheets
+        document.querySelectorAll('.section .full-sheets .cts-btn.active').forEach(btn => {
+          btn.classList.remove('active');
+        });
+      }
+    });
+  });
+  
+  document.querySelectorAll('.section.thickness .cts-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const newSelectedThickness = button.getAttribute('data-thickness');
+      if (prevSelectedThickness !== newSelectedThickness) {
+        prevSelectedThickness = newSelectedThickness;
+        clearSectionErrors(document.querySelector('.section.dimensions'));
+        clearSectionErrors(document.querySelector('.section.texture'));
+        clearSectionErrors(document.querySelector('.section.thickness'));
+        clearSectionErrors(document.querySelector('.section.color'));
+  
+        // Clear active class from .cts-btn elements in .section.full-sheets
+        document.querySelectorAll('.section .full-sheets .cts-btn.active').forEach(btn => {
+          btn.classList.remove('active');
+        });
+      }
+    });
+  });
+  
+  document.querySelectorAll('.section.color .cts-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const newSelectedColor = button.getAttribute('data-color');
+      if (prevSelectedColor !== newSelectedColor) {
+        prevSelectedColor = newSelectedColor;
+        clearSectionErrors(document.querySelector('.section.dimensions'));
+        clearSectionErrors(document.querySelector('.section.texture'));
+        clearSectionErrors(document.querySelector('.section.thickness'));
+        clearSectionErrors(document.querySelector('.section.color'));
+  
+        // Clear active class from .cts-btn elements in .section.full-sheets
+        document.querySelectorAll('.section .full-sheets .cts-btn.active').forEach(btn => {
+          btn.classList.remove('active');
+        });
+      }
+    });
+  });
+  
+  function validateInputs() {
+    const maxLength = parseFloat(document.querySelector('.max.length').textContent.match(/\d+(\.\d+)?/)[0]);
+    const maxWidth = parseFloat(document.querySelector('.max.width').textContent.match(/\d+(\.\d+)?/)[0]);
+    const lengthInputValue = parseFloat(lengthInput.value);
+    const widthInputValue = parseFloat(widthInput.value);
+  
+    const lengthError = document.querySelector('.length-input');
+    const widthError = document.querySelector('.width-input');
+    const messageBox = document.querySelector('.message-box');
+    const errorList = document.querySelector('.error-list');
+  
+    lengthError.classList.remove('error');
+    widthError.classList.remove('error');
+    messageBox.style.display = 'none';
+  
+    let isValid = true;
+    let lengthInputError = false;
+    let widthInputError = false;
+    let isProductCombinationInvalid = false;
+    let isOutOfStock = false;
+  
+    errorList.innerHTML = '';
+  
+    // Check if the selected product combination has a base SKU
+    const selectedTexture = document.querySelector('.product-options .texture .cts-btn.active').getAttribute('data-texture');
+    const selectedThickness = document.querySelector('.product-options .thickness .cts-btn.active').getAttribute('data-thickness');
+    const selectedColor = document.querySelector('.product-options .color .cts-btn.active').getAttribute('data-color');
+    const baseSKU = getBaseSKU(selectedTexture, selectedThickness, selectedColor);
+  
+    if (!baseSKU) {
+      isProductCombinationInvalid = true;
+      isValid = false;
+      errorList.innerHTML += '<li>The selected product combination is not available.</li>';
+    }
+  
+    if (baseSKU) {
+      // Check if the selected base SKU has available inventory
+      const product = productData[baseSKU];
+      if (!product || product.inventory.length === 0) {
+        isOutOfStock = true;
+        isValid = false;
+        errorList.innerHTML += '<li>The selected product combination is currently out of stock.</li>';
+      }
+    }
+  
+    if(!isCustomSizing) {
+      if (isProductCombinationInvalid || isOutOfStock) {
+        markSectionWithError(document.querySelector('.section.texture'));
+        markSectionWithError(document.querySelector('.section.thickness'));
+        markSectionWithError(document.querySelector('.section.color'));
+      } else {
+        if (isNaN(lengthInputValue) || lengthInputValue <= 0 || lengthInputValue > maxLength) {
+          lengthInputError = true;
+          isValid = false;
+          errorList.innerHTML += '<li>Length should be a number greater than 0 and less than or equal to ' + maxLength + '.</li>';
+        } else if (lengthInputValue.toString().split('.')[1]?.length > 3) {
+          lengthInputError = true;
+          isValid = false;
+          errorList.innerHTML += '<li>Length should have a maximum of 3 decimal places.</li>';
+        }
+  
+        if (isNaN(widthInputValue) || widthInputValue <= 0 || widthInputValue > maxWidth) {
+          widthInputError = true;
+          isValid = false;
+          errorList.innerHTML += '<li>Width should be a number greater than 0 and less than or equal to ' + maxWidth + '.</li>';
+        } else if (widthInputValue.toString().split('.')[1]?.length > 3) {
+          widthInputError = true;
+          isValid = false;
+          errorList.innerHTML += '<li>Width should have a maximum of 3 decimal places.</li>';
+        }
+      }
+  
+      if (lengthInputError && !isOutOfStock && !isProductCombinationInvalid) {
+        lengthError.classList.add('error');
+      }
+  
+      if (widthInputError && !isOutOfStock && !isProductCombinationInvalid) {
+        widthError.classList.add('error');
+      }
+    } else {
+      const activeFullSheetButton = document.querySelector('.full-sheets .cts-btn.active');
+      const availableFullSheetButtons = document.querySelectorAll('.full-sheets .cts-btn');
+  
+      const isInvalidOrOutOfStock = isProductCombinationInvalid || isOutOfStock;
+  
+      if (!isInvalidOrOutOfStock) {
+        if (availableFullSheetButtons.length === 0) {
+          isValid = false;
+          errorList.innerHTML += '<li>There are no full sheets currently available.</li>';
+          markSectionWithError(document.querySelector('.section.dimensions'));
+        } else if (!activeFullSheetButton) {
+          isValid = false;
+          errorList.innerHTML += '<li>You must select a full sheet size.</li>';
+          markSectionWithError(document.querySelector('.section.dimensions'));
+        }
+      } else {
+        markSectionWithError(document.querySelector('.section.texture'));
+        markSectionWithError(document.querySelector('.section.thickness'));
+        markSectionWithError(document.querySelector('.section.color'));
+      }
+    }
+  
+    if (!isValid) {
+      messageBox.style.display = 'block';
+    }
+  
+    return isValid;
+  }
+  
+  // Attach validation function to the ".add-to-cart" button
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+  
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', async () => {
+      if (!validateInputs()) {
+        // Validation failed
+      } else {
+        const messageBox = document.querySelector('.message-box');
+        const errorList = document.querySelector('.error-list');
+  
+        messageBox.style.display = 'none';
+        errorList.innerHTML = '';
+  
+        button.disabled = true;
+        button.innerText = 'Adding to cart...';
+  
+        const selectedOptionTextAdditional = document.querySelector('.section.additional-options .cts-btn[data-target="rubber-feet"] .selected-option-text');
+  
+        // Remove rubber feet prices from cutting board product prior to creation
+        if (selectedOptionTextAdditional.textContent == 'Separate') {
+          globalPrice -= 3.99
+        } else if (selectedOptionTextAdditional.textContent == 'Installed') {
+          globalPrice -= 13.99
+        } else {
+          globalPrice = globalPrice;
+        }
+        
+        const title = globalTitle;
+        const sku = globalSKU;
+        const totalPrice = globalPrice;
+        const totalWeight = globalWeight;
+        const productDimensions = {
+          width: globalWidth,
+          depth: globalLength,
+          height: globalThickness
+        };
+        const imageURL = document.querySelector('.product-image img').src;
+  
+        const requestBody = JSON.stringify({
+          name: title,
+          sku: sku,
+          price: totalPrice,
+          weight: totalWeight,
+          width: productDimensions.width,
+          depth: productDimensions.depth,
+          height: productDimensions.height,
+          image: imageURL
+        });
+  
+        try {
+          const response = await fetch('https://cut-to-size.herokuapp.com/cartItems/', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: requestBody
+          });
+  
+          const responseBody = await response.json();
+          console.log(responseBody);
+  
+          let productId = null;
+  
+          if (response.ok) {
+            if (responseBody.data != null) {
+              productId = responseBody.data.id;
+  
+              sendToCart(productId, globalQuantity);
+            } else if (responseBody.title == 'The product name is a duplicate') {
+              productId = await getVariant(title);
+              sendToCart(productId, globalQuantity);
+            } else if (responseBody.title == 'The product sku is a duplicate') {
+              let appendedSku = sku;
+              let skuIsDuplicate = true;
+              let variantNumber = 1;
+
+              while (skuIsDuplicate) {
+                appendedSku = sku + `V${variantNumber}`;
+
+                const requestBody = JSON.stringify({
+                  name: title,
+                  sku: appendedSku,
+                  price: totalPrice,
+                  weight: totalWeight,
+                  width: productDimensions.width,
+                  depth: productDimensions.depth,
+                  height: productDimensions.height,
+                  image: imageURL
+                });
+
+                try {
+                  const response = await fetch('https://cut-to-size.herokuapp.com/cartItems/', {
+                    method: 'POST',
+                    headers: {
+                      'Accept': 'application/json',
+                      'Content-Type': 'application/json'
+                    },
+                    body: requestBody
+                  });
+
+                  const responseBody = await response.json();
+
+                  if (response.ok && responseBody.data != null && responseBody.data.id) {
+                    productId = responseBody.data.id;
+                    skuIsDuplicate = false; // Exit the loop when a unique SKU is found
+                    sendToCart(productId, globalQuantity);
+                  } else {
+                    variantNumber++; // Try the next variant (e.g., V2, V3, ...)
+                  }
+                } catch (error) {
+                  variantNumber++; // Try the next variant (e.g., V2, V3, ...)
+                }
+              }
+            }
+          } else {
+            messageBox.style.display = 'block';
+            errorList.innerHTML += '<li>There was an issue adding product(s) to cart.</li>';
+          }
+        } catch (error) {
+          messageBox.style.display = 'block';
+          errorList.innerHTML += '<li>There was an issue adding product(s) to cart.</li>';
+        } finally {
+          button.disabled = false;
+          button.innerText = 'Add to Cart';
+        }
+      }
+    });
+  });
+  
+  // Clear error class and messages when inputs change
+  lengthInput.addEventListener('input', () => {
+    const lengthError = document.querySelector('.length-input');
+    lengthError.classList.remove('error');
+  
+    // Clear error messages and hide message box
+    const errorList = document.querySelector('.error-list');
+    const messageBox = document.querySelector('.message-box');
+    errorList.innerHTML = '';
+    messageBox.style.display = 'none';
+  });
+  
+  widthInput.addEventListener('input', () => {
+    const widthError = document.querySelector('.width-input');
+    widthError.classList.remove('error');
+  
+    // Clear error messages and hide message box
+    const errorList = document.querySelector('.error-list');
+    const messageBox = document.querySelector('.message-box');
+    errorList.innerHTML = '';
+    messageBox.style.display = 'none';
+  });
+</script>
+
+<script>
+  // Add to cart functionality
+  async function getVariant(title) {
+    title = encodeURIComponent(title);
+  
+    let response = await fetch('https://cut-to-size.herokuapp.com/cartItems/' + title, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+  
+    let data = await response.json();
+    let productId = data.data[0].id;
+  
+    return productId;
+  }
+  
+  async function createCart(productId, quantity) {
+    let response = await fetch('/api/storefront/carts/', {
+      method: "POST",
+      credentials: "same-origin",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + productId + '}]}'
+    });
+  
+    let data = await response.json();
+    let cartId = data.id;
+  
+    if (JSON.stringify(data).includes('createdTime')) {
+      const cartQuantityElement = document.querySelector('.cart-quantity');
+      const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+      if (cartQuantity === 0) {
+        cartQuantityElement.textContent = globalQuantity.toString();
+        cartQuantityElement.classList.add('countPill--positive');
+      } else {
+        const newCartQuantity = cartQuantity + globalQuantity;
+        cartQuantityElement.textContent = newCartQuantity;
+      }
+    }
+  
+    const rubberFeetOption = document.querySelector('.section.additional-options .cts-btn[data-target="rubber-feet"] .option .selected-option-text');
+  
+    if (rubberFeetOption.textContent == 'Separate') {
+      let response = await fetch('/api/storefront/carts/' + cartId + '/items', {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + '152' + '}]}'
+      });
+  
+      let data = await response.json();
+  
+      if (JSON.stringify(data).includes('createdTime')) {
+        const cartQuantityElement = document.querySelector('.cart-quantity');
+        const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+        if (cartQuantity === 0) {
+          cartQuantityElement.textContent = globalQuantity.toString();
+          cartQuantityElement.classList.add('countPill--positive');
+        } else {
+          const newCartQuantity = cartQuantity + globalQuantity;
+          cartQuantityElement.textContent = newCartQuantity;
+        }
+      }
+    }
+  
+    if (rubberFeetOption.textContent == 'Installed') {
+      let response = await fetch('/api/storefront/carts/' + cartId + '/items', {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + '153' + '}]}'
+      });
+  
+      let data = await response.json();
+  
+      if (JSON.stringify(data).includes('createdTime')) {
+        const cartQuantityElement = document.querySelector('.cart-quantity');
+        const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+        if (cartQuantity === 0) {
+          cartQuantityElement.textContent = globalQuantity.toString();
+          cartQuantityElement.classList.add('countPill--positive');
+        } else {
+          const newCartQuantity = cartQuantity + globalQuantity;
+          cartQuantityElement.textContent = newCartQuantity;
+        }
+      }
+    }
+  }
+  
+  async function getCartId() {
+    let cartId = null;
+  
+    let response = await fetch('/api/storefront/carts?include=lineItems.digitalItems.options,lineItems.physicalItems.options', {
+      method: "GET",
+      credentials: "same-origin"
+    });
+  
+    let data = await response.json();
+  
+    if(JSON.stringify(data) == '[]') {
+      cartId = null;
+    } else {
+      cartId = data[0].id;
+    }
+  
+    return cartId;
+  }
+  
+  async function sendToCart(productId, quantity) {
+    let cartId = await getCartId();
+  
+    if(cartId == null) {
+      createCart(productId, quantity);
+    } else {
+      let response = await fetch('/api/storefront/carts/' + cartId + '/items', {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + productId + '}]}'
+      });
+  
+      let data = await response.json();
+  
+      if (JSON.stringify(data).includes('createdTime')) {
+        const cartQuantityElement = document.querySelector('.cart-quantity');
+        const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+        if (cartQuantity === 0) {
+          cartQuantityElement.textContent = globalQuantity.toString();
+          cartQuantityElement.classList.add('countPill--positive');
+        } else {
+          const newCartQuantity = cartQuantity + globalQuantity;
+          cartQuantityElement.textContent = newCartQuantity;
+        }
+      }
+  
+      const rubberFeetOption = document.querySelector('.section.additional-options .cts-btn[data-target="rubber-feet"] .option .selected-option-text');
+  
+      if (rubberFeetOption.textContent == 'Separate') {
+        let response = await fetch('/api/storefront/carts/' + cartId + '/items', {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + '152' + '}]}'
+        });
+  
+        let data = await response.json();
+  
+        if (JSON.stringify(data).includes('createdTime')) {
+          const cartQuantityElement = document.querySelector('.cart-quantity');
+          const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+          if (cartQuantity === 0) {
+            cartQuantityElement.textContent = globalQuantity.toString();
+            cartQuantityElement.classList.add('countPill--positive');
+          } else {
+            const newCartQuantity = cartQuantity + globalQuantity;
+            cartQuantityElement.textContent = newCartQuantity;
+          }
+        }
+      }
+  
+      if (rubberFeetOption.textContent == 'Installed') {
+        let response = await fetch('/api/storefront/carts/' + cartId + '/items', {
+          method: "POST",
+          credentials: "same-origin",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: '{ "lineItems": [{ "quantity": ' + quantity + ', "productId": ' + '153' + '}]}'
+        });
+  
+        let data = await response.json();
+  
+        if (JSON.stringify(data).includes('createdTime')) {
+          const cartQuantityElement = document.querySelector('.cart-quantity');
+          const cartQuantity = parseInt(cartQuantityElement.textContent, 10);
+  
+          if (cartQuantity === 0) {
+            cartQuantityElement.textContent = globalQuantity.toString();
+            cartQuantityElement.classList.add('countPill--positive');
+          } else {
+            const newCartQuantity = cartQuantity + globalQuantity;
+            cartQuantityElement.textContent = newCartQuantity;
+          }
+        }
+      }
+    }
+  }
+</script>
+
+<script>
+  function updateShipping() {
+    setTimeout(() => {
+      const shippingElements = document.querySelectorAll('.shipping');
+      const selectedThickness = document.querySelector('.product-options .thickness .cts-btn.active').getAttribute('data-thickness');
+  
+      if (!isCustomSizing) {
+        const lengthInputValue = lengthInput.value.trim();
+        const widthInputValue = widthInput.value.trim();
+  
+        const lowerDimension = Math.min(parseFloat(widthInputValue), parseFloat(lengthInputValue));
+        const higherDimension = Math.max(parseFloat(widthInputValue), parseFloat(lengthInputValue));
+  
+        let weight = calculateWeight(widthInputValue, lengthInputValue, selectedThickness);
+  
+        if (globalPrice >= 75) {
+          shippingElements.forEach(element => {
+            const text = `(+FREE shipping)`;
+            element.textContent = text;
+            element.classList.remove('warning');
+          });
+        } else {
+          shippingElements.forEach(element => {
+            const text = `(+$6.00 estimated shipping)`;
+            element.textContent = text;
+            element.classList.remove('warning');
+          });
+        }
+  
+        var girth = ((lowerDimension + 1) * 2);
+        var cubeSize = girth + (higherDimension + 1);
+          
+        if (cubeSize > 118 ) {
+          shippingElements.forEach(element => {
+            const text = `(These dimensions may NOT qualify for free shipping)`;
+            element.textContent = text;
+            element.classList.add('warning');
+          });
+        }
+      } else {
+        const activeFullSheetButton = document.querySelector('.full-sheets .cts-btn.active');
+  
+        if (activeFullSheetButton) {
+          const dimensions = activeFullSheetButton.textContent.trim().replace(/"/g, '');
+          const [width, length] = dimensions.split(' x ');
+  
+          // Ensure W is the lower value and L is the higher value
+          const numericWidth = parseFloat(width);
+          const numericLength = parseFloat(length);
+          const lowerDimension = Math.min(numericWidth, numericLength);
+          const higherDimension = Math.max(numericWidth, numericLength);
+  
+          weight = calculateWeight(numericWidth, numericLength, selectedThickness);
+  
+          if (globalPrice >= 75) {
+            shippingElements.forEach(element => {
+              const text = `(+FREE shipping)`;
+              element.textContent = text;
+              element.classList.remove('warning');
+            });
+          } else {
+            shippingElements.forEach(element => {
+              const text = `(+$6.00 estimated shipping)`;
+              element.textContent = text;
+              element.classList.remove('warning');
+            });
+          }
+  
+          var girth = ((lowerDimension + 1) * 2);
+          var cubeSize = girth + (higherDimension + 1);
+            
+          if (cubeSize > 118 ) {
+            shippingElements.forEach(element => {
+              const text = `(These dimensions may NOT qualify for free shipping)`;
+              element.textContent = text;
+              element.classList.add('warning');
+            });
+          }
+        }
+      }
+    }, 100); // Introduce a very small delay to allow class changes to propagate
+  }
+</script>
+
+<script>
+  // TODO Price validation on backend
+</script>
+
+<script>
+  // TODO material optimization validation
+</script>
+
+<script>
+  // TODO shipping questionaire (liftgate/loading dock, business name, etc.)
+</script>
+
+{{/partial}}
+
+{{> layout/home}}

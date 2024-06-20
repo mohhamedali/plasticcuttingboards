@@ -1,0 +1,22 @@
+# Compiled files
+*.class
+*.o
+
+# Logs
+*.log
+
+# Node modules
+node_modules/
+
+# Build artifacts and configuration files
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+karma.conf.js
+Gruntfile.js
+config.json
+stencil.conf.js
+CHANGELOG.md
+.anima/
+assets/dist/
+file_list.txt

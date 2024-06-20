@@ -1,0 +1,349 @@
+{{#partial "hero"}}
+  <style>
+    body {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .body {
+      margin-bottom: 0px;
+      margin-top: 0px !important;
+    }
+
+    .restaurants-bakeries a {
+      color: #6BADC9;
+    }
+
+    .restaurants-bakeries a:hover {
+      color: #EB8C42;
+    }
+
+    .hero-container {
+      position: relative;
+    }
+
+
+    .hero {
+      background: url('https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/restaurant-banner.jpg?t=1693929975') no-repeat center center;
+      background-position: center -200px;
+      background-size: cover;
+      height: 275px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(27, 44, 51, 0.6);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 1170px;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .hero-content .hero-title {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-overlay {
+      background-color: rgba(242, 242, 242, 0.9);
+      border-bottom: 3px solid #6BADC9;
+      border-top: 4px solid #6BADC9;
+      position: absolute;
+      top: 50%;
+      left: 110%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    .hero-overlay .box {
+      align-items: center;
+      border-bottom: 1px solid #6BADC9;
+      color: #467082;
+      display: flex;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    .hero-overlay .box img {
+      width: 45px;
+    }
+
+    .content {
+      background: linear-gradient(90deg, #ffffff 50%, #243F49 50%);
+      border-top: 5px solid;
+      border-image: linear-gradient(to right, #6BADC9 50%, #243F49 50%) 1 0 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content .boxes {
+      align-items: center;
+      display: flex;
+      width: 1170px;
+    }
+
+    .content .boxes p {
+      margin: 15px;
+    }
+
+    .content .boxes .box {
+      width: 50%;
+    }
+
+    .content .boxes .box.white {
+      color: #243F49;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .content .boxes .box.white p {
+      line-height: 2.2;
+    }
+
+    .content .boxes .box.blue {
+      color: #ffffff;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    .cta .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: space-around;
+      width: 1170px;
+    }
+
+    .cta .box {
+      text-align: center;
+    }
+
+    .cta .box h2 {
+      color: #243F49;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .cta .btn {
+      background-color: #dc6927;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+      padding: 10px;
+      transition: background-color 0.3s;
+      width: 175px;
+    }
+
+    .cta .btn:hover {
+      background-color: #cc6225;
+      transition: background-color 0.3s;
+    }
+
+    .specialty-banner {
+      background-color: #DC6927;
+      color: #ffffff;
+      display: flex;
+      font-weight: bold;
+      justify-content: center;
+      padding: 20px 15px;
+    }
+
+    .specialty-banner .boxes {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 1170px;
+    }
+
+    .specialty-banner .box {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 15px;
+    }
+
+    .specialty-banner .box img {
+      margin-right: 10px;
+    }
+
+    .footer {
+      border: none;
+    }
+
+    @media (max-width: 1700px) {
+      .hero {
+        background-position: center center;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .hero-content {
+        text-align: center;
+        top: 50px;
+      }
+
+      .hero-overlay {
+        left: 50%;
+        top: 175px;
+        width: 100%;
+      }
+
+      .hero-overlay .box {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .hero-overlay .box img {
+        width: 20px;
+      }
+
+      .content .boxes .box.white {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .content {
+        background: none;
+        border-top: none;
+      }
+
+      .content .boxes {
+        flex-direction: column;
+      }
+
+      .content .boxes .box {
+        width: 100%;
+      }
+
+      .content .boxes .box p {
+        margin: 20px 15px;
+      }
+
+      .content .boxes .box.white {
+        font-size: 18px;
+      }
+
+      .content .boxes .box.white p {
+        line-height: 1.8;
+      }
+
+      .content .boxes .box.blue {
+        background-color: #343F49;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .specialty-banner .boxes {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero-content .hero-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <div class="restaurants-bakeries">
+    <div class="hero-container">
+      <div class="hero">
+      </div>
+    
+      <div class="hero-content">
+        <h1 class="hero-title">Restaurants & Bakeries</h1>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/chef-icon.png?t=1693930095">
+          <p>Food safe</p>
+        </div>
+
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/utencils-icon.png?t=1693930096">
+          <p>Minimizes wear on knives</p>
+        </div>
+
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/trash-icon.png?t=1693930097">
+          <p>Reduces odor formation</p>
+        </div>
+
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/clipboard-icon.png?t=1693930096">
+          <p>FDA, USDA, & NSF-51 approved</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="boxes">
+        <div class="box white">
+          <p>We specialize in providing custom solutions for your restaurant, bakery, deli, or bar. We have the capability to cut any piece to size, add a handle, and add a groove for catching liquid, if that's what your business demands.</p>
+        </div>
+
+        <div class="box blue">
+          <p>We provide cutting surfaces in a variety of colors and thicknesses, all FDA and USDA approved for food contact. Plastic Cutting Boards is exclusively serviced by <a href="https://plastic-craft.com">Plastic-Craft</a>, a New York based plastic company. Plastic-Craft aims to create straightforward plastic solutions. If you do not see your exact model number or brand, please <a href="/contact-us/">contact us</a> and we will be glad to help. Also, if you know your dimensions, you may exercise the <a href="../">cut-to-size</a> option to order your replacement.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="boxes centered">
+        <div class="box column">
+          <h2>Make Your Own Board</h2>
+          <a href="https://plasticcuttingboards.com/#custom-cutting-board"><button class="btn">Cut-to-Size</button></a>
+        </div>
+
+        <div class="box column">
+          <h2>Shop by Brand</h2>
+          <a href="/prep-station-cutting-boards/"><button class="btn">Prep Stations</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="specialty-banner">
+      <div class="boxes">
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/click-icon.png?t=1693929445" alt="Custom Sizes Icon">
+          <p>Custom sizes and colors</p>
+        </div>
+
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/service-icon.png?t=1693929592" alt="Personalized Service Icon">
+          <p>Personalized service</p>
+        </div>
+
+        <div class="box">
+          <img src="https://cdn11.bigcommerce.com/s-ibf5bmbfu4/images/stencil/original/image-manager/delivery-icon.png?t=1693929592" alt="Fast Delivery Icon">
+          <p>Fast delivery</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/partial}}
+
+{{> layout/base}}
